@@ -50,6 +50,7 @@
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
+        "logo": "shopify://shop_images/moramero_logo_-removebg-preview.png",
         "logo_max_width": 220,
         "logo_mobile_max_width": 120,
         "menu": "main-menu",
