@@ -82,12 +82,7 @@
       "name": "Featured collection",
       "settings": {
         "collection": "",
-        "products": [
-          "marek-koszula-lniana-meska-lekka-koszula-codzienna-z-dlugim-rekawem-w-naturalnym-kolorze",
-          "laura-spodnie-damskie-z-wysokim-stanem-wygodne-spodnie-z-szerokimi-nogawkami-do-codziennego-uzytku",
-          "hania-bluzka-damska-bez-rekawow-elegancka-bluzka-z-drapowanym-dekoltem",
-          "lena-sandaly-damskie-na-slupku-eleganckie-czarne-sandaly-na-kazda-okazje"
-        ],
+        "products": [],
         "full_width": true,
         "stack_products": true,
         "show_progress_bar": false,
@@ -95,10 +90,10 @@
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "subheading": "",
-        "title": "Smart Casual dla Niego i dla Niej",
+        "title": "Smart Casual per Lui e per Lei",
         "content": "",
         "link_url": "shopify://collections/all",
-        "link_text": "ZOBACZ WSZYSTKO",
+        "link_text": "VEDI TUTTO",
         "background": "",
         "background_gradient": "",
         "text_color": "",
