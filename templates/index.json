@@ -1,1 +1,761 @@
-{"sections":{"slideshow":{"type":"slideshow","blocks":{"slide-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/ChatGPT_Image_17_jul_2026_05_05_49.png","mobile_image":"shopify:\/\/shop_images\/ChatGPT_Image_17_jul_2026_05_07_22.png","content_max_width":400,"mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center-start sm:text-start","subheading":"Kolekcja Lato 2026","title":"Styl, który pasuje do Twojego życia","heading_tag":"h2","button_text":"Odkryj kolekcję","button_link":"shopify:\/\/collections\/all","text_color":"#f7f3eb","button_background":"#6c2d31","button_text_color":"#f7f3eb","overlay_color":"#1a1a1a","overlay_opacity":0,"background":"","background_gradient":""}}},"block_order":["slide-1"],"settings":{"full_width":true,"allow_transparent_header":false,"show_initial_transition":false,"image_size":"auto","controls_type":"numbers","transition_type":"fade_with_text","autoplay":true,"cycle_speed":6,"background":"#f2f2f2","background_gradient":"linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"}},"featured_collection_dpjWJ3":{"type":"featured-collection","disabled":true,"name":"Featured collection","settings":{"collection":"sandaly-damskie","products":[],"full_width":true,"stack_products":false,"show_progress_bar":false,"products_count":4,"products_per_row_mobile":"2","products_per_row_desktop":4,"subheading":"","title":"Sandały damskie","content":"","link_url":"shopify:\/\/collections\/sandaly-damskie","link_text":"ZOBACZ WSZYSTKO","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}},"featured_collection_ryCrMC":{"type":"featured-collection","name":"Featured collection","settings":{"collection":"","products":["marek-koszula-lniana-meska-lekka-koszula-codzienna-z-dlugim-rekawem-w-naturalnym-kolorze","laura-spodnie-damskie-z-wysokim-stanem-wygodne-spodnie-z-szerokimi-nogawkami-do-codziennego-uzytku","hania-bluzka-damska-bez-rekawow-elegancka-bluzka-z-drapowanym-dekoltem","lena-sandaly-damskie-na-slupku-eleganckie-czarne-sandaly-na-kazda-okazje"],"full_width":true,"stack_products":true,"show_progress_bar":false,"products_count":4,"products_per_row_mobile":"2","products_per_row_desktop":4,"subheading":"","title":"Smart Casual dla Niego i dla Niej","content":"","link_url":"shopify:\/\/collections\/all","link_text":"ZOBACZ WSZYSTKO","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}},"178344819491f398b0":{"type":"_blocks","blocks":{"ai_gen_block_2a697ec_hitXKJ":{"type":"ai_gen_block_2a697ec","settings":{"image_1":"shopify:\/\/shop_images\/ChatGPT_Image_7_jul_2026_20_22_45.png","label_1":"SUKIENKI","link_1":"shopify:\/\/collections\/sukienki","image_2":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_00_09_42.png","label_2":"MARYNARKI DAMSKIE","link_2":"shopify:\/\/collections\/marynarki-damskie","image_3":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_00_12_49.png","label_3":"TOPY I BLUZKI DAMSKIE","link_3":"shopify:\/\/collections\/topy-i-bluzki-damskie","image_aspect_ratio":"2\/3","image_gap":4,"mobile_gap":4,"font":"assistant_n4","label_font_size":14,"label_padding":10,"label_offset":20,"label_border_radius":0,"label_background":"#ffffff","label_text_color":"#000000","show_arrows":false,"arrow_size":50,"arrow_offset":20,"arrow_background":"#000000","arrow_color":"#ffffff","background_color":"#ffffff"},"blocks":{}},"ai_gen_block_2a697ec_xTTeU6":{"type":"ai_gen_block_2a697ec","settings":{"image_1":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_00_17_02.png","label_1":"SPODNIE DAMSKIE","link_1":"shopify:\/\/collections\/spodnie-damskie","image_2":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_00_22_40.png","label_2":"SANDAŁY DAMSKIE","link_2":"shopify:\/\/collections\/sandaly-damskie","image_3":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_00_26_23.png","label_3":"BUTY DAMSKIE","link_3":"shopify:\/\/collections\/buty-damskie","image_aspect_ratio":"2\/3","image_gap":4,"mobile_gap":4,"font":"assistant_n4","label_font_size":14,"label_padding":10,"label_offset":20,"label_border_radius":0,"label_background":"#ffffff","label_text_color":"#000000","show_arrows":false,"arrow_size":50,"arrow_offset":20,"arrow_background":"#000000","arrow_color":"#ffffff","background_color":"#ffffff"},"blocks":{}}},"block_order":["ai_gen_block_2a697ec_hitXKJ","ai_gen_block_2a697ec_xTTeU6"],"settings":{}},"17805715688845ca6d":{"type":"_blocks","settings":{}},"featured_collection_VK4pQV":{"type":"featured-collection","name":"Featured collection","settings":{"collection":"koszule-meskie","products":[],"full_width":true,"stack_products":false,"show_progress_bar":false,"products_count":4,"products_per_row_mobile":"1","products_per_row_desktop":4,"subheading":"","title":"Koszule męskie","content":"","link_url":"shopify:\/\/collections\/koszule-meskie","link_text":"ZOBACZ WSZYSTKO","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}},"blocks_xA4Hnh":{"type":"_blocks","blocks":{"ai_gen_block_2a697ec_UamLUe":{"type":"ai_gen_block_2a697ec","settings":{"image_1":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_01_21_18.png","label_1":"GARNITURY MĘSKIE","link_1":"shopify:\/\/collections\/garnitury-meskie","image_2":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_01_25_31.png","label_2":"KOSZULE MĘSKIE","link_2":"","image_3":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_01_36_26.png","label_3":"MARYNARKI MĘSKIE","link_3":"shopify:\/\/collections\/szorty-lniane-meskie","image_aspect_ratio":"2\/3","image_gap":4,"mobile_gap":4,"font":"assistant_n4","label_font_size":14,"label_padding":10,"label_offset":20,"label_border_radius":0,"label_background":"#ffffff","label_text_color":"#000000","show_arrows":false,"arrow_size":50,"arrow_offset":20,"arrow_background":"#000000","arrow_color":"#ffffff","background_color":"#ffffff"},"blocks":{}},"ai_gen_block_2a697ec_DtybjW":{"type":"ai_gen_block_2a697ec","settings":{"image_1":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_01_13_54.png","label_1":"SPODNIE MĘSKIE","link_1":"shopify:\/\/collections\/spodnie-meskie","image_2":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_01_12_59.png","label_2":"OBUWIE MĘSKIE","link_2":"shopify:\/\/collections\/buty-meskie","image_3":"shopify:\/\/shop_images\/ChatGPT_Image_8_jul_2026_01_18_56.png","label_3":"MĘSKI KOMPLET","link_3":"shopify:\/\/collections\/meski-komplet-lniany-szorty","image_aspect_ratio":"2\/3","image_gap":4,"mobile_gap":4,"font":"assistant_n4","label_font_size":14,"label_padding":10,"label_offset":20,"label_border_radius":0,"label_background":"#ffffff","label_text_color":"#000000","show_arrows":false,"arrow_size":50,"arrow_offset":20,"arrow_background":"#000000","arrow_color":"#ffffff","background_color":"#ffffff"},"blocks":{}}},"block_order":["ai_gen_block_2a697ec_UamLUe","ai_gen_block_2a697ec_DtybjW"],"settings":{}},"blocks_RyRfDh":{"type":"_blocks","name":"Featured collections","settings":{}},"17807585870242c993":{"type":"_blocks","settings":{}},"1780759419e837e8b3":{"type":"_blocks","blocks":{"ai_gen_block_5fd3cb8_xkGTAw":{"type":"ai_gen_block_5fd3cb8","settings":{"background_image":"shopify:\/\/shop_images\/ChatGPT_Image_7_jul_2026_19_43_23_1.png","section_background":"#f7f3eb","heading":"Dołącz do ponad 3000 zadowolonych klientek","heading_font":"serif","heading_size_mobile":20,"heading_size_desktop":50,"subheading":"Elegancja, komfort i styl w jednym miejscu — w cenach, które nie zrujnują budżetu. Ubierz się tak, jak czujesz się w środku.","subheading_font":"system_ui_n4","subheading_size_mobile":13,"subheading_size_desktop":23,"text_color":"#f7f3eb","text_position_bottom":50,"show_badge":false,"badge_text":"","badge_background":"#f7f3eb","badge_text_color":"#1a1a1a","badge_size":80,"badge_size_desktop":120,"badge_text_size":12,"badge_text_size_desktop":16,"badge_position_top":20,"badge_position_right":20,"button_label":"Odkryj kolekcję","button_link":"shopify:\/\/collections\/all","button_background":"#6c2d31","button_text_color":"#f7f3eb","button_hover_background":"#4a1f22","button_hover_text_color":"#f7f3eb","button_text_size":16,"button_padding_vertical":16,"button_padding_horizontal":32,"button_border_radius":4,"button_spacing_top":40,"button_spacing_bottom":40},"blocks":{}}},"block_order":["ai_gen_block_5fd3cb8_xkGTAw"],"settings":{}},"collection_list_VEcQxQ":{"type":"collection-list","blocks":{"collection_HgXFBF":{"type":"collection","settings":{"collection":"spodnie-meskie","subheading":"","title":"","url":"shopify:\/\/collections\/kurtki-i-plaszcze-1","heading_tag":"h4","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"collection_iwQ9bJ":{"type":"collection","settings":{"collection":"koszulki-meskie","subheading":"","title":"","url":"shopify:\/\/collections\/swetry-i-bluzy","heading_tag":"h4","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"collection_QDqL9r":{"type":"collection","settings":{"collection":"obuwie-meskie","subheading":"","title":"","url":"shopify:\/\/collections\/kurtki-wodoodporne","heading_tag":"h4","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"collection_BqGGnT":{"type":"collection","settings":{"collection":"garnitury","subheading":"","title":"","url":"","heading_tag":"h4","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"collection_CxcnaY":{"type":"collection","settings":{"collection":"kurtki-i-plaszcze-meskie","subheading":"","title":"","url":"","heading_tag":"h4","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"collection_V7CPw9":{"type":"collection","settings":{"collection":"swetry-i-kardigany-dla-mezczyzn","subheading":"","title":"","url":"","heading_tag":"h4","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}}},"block_order":["collection_HgXFBF","collection_iwQ9bJ","collection_QDqL9r","collection_BqGGnT","collection_CxcnaY","collection_V7CPw9"],"disabled":true,"name":"Collection list","settings":{"full_width":true,"stack_collections":true,"collections_per_row_mobile":"2","collections_per_row":3,"show_progress_bar":false,"subheading":"","title":"KOLEKCJE MĘSKIE 2026","content":"","link_url":"shopify:\/\/collections\/kolekcja-meska","link_text":"ZOBACZ WSZYSTKO","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":""}},"custom_liquid_hRFagD":{"type":"custom-liquid","name":"Custom Liquid","settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"liquid":"","background":"","background_gradient":"","text_color":""}},"text_with_icons_Y38QtN":{"type":"text-with-icons","blocks":{"item_XqVaFU":{"type":"item","settings":{"icon":"picto-shield","mobile_icon_width":24,"icon_width":32,"icon_background_type":"circle","icon_background":"","icon_color":"","title":"BEZPIECZNE PŁATNOŚCI","content":"<p>Bardzo cenimy Twoje bezpieczeństwo i wygodę!<\/p>"}},"item_qwVbR6":{"type":"item","settings":{"icon":"picto-truck","mobile_icon_width":24,"icon_width":32,"icon_background_type":"circle","icon_background":"","icon_color":"","title":"DARMOWA WYSYŁKA","content":"<p>NA WSZYSTKIE ZAMÓWIENIA NA TERENIE POLSKI<\/p>"}},"item_QnUfG4":{"type":"item","settings":{"icon":"picto-return","mobile_icon_width":24,"icon_width":32,"icon_background_type":"circle","icon_background":"","icon_color":"","title":"ŁATWY ZWROT!","content":"<p>Rozpocznij zwrot w ciągu 30 dni od otrzymania produktu!<\/p>"}},"item_NAAGDC":{"type":"item","settings":{"icon":"picto-question","mobile_icon_width":24,"icon_width":32,"icon_background_type":"circle","icon_background":"","icon_color":"","title":"MASZ PYTANIE?","content":"<p>Obsługa klienta dostępna 7 dni w tygodniu.<\/p>"}}},"block_order":["item_XqVaFU","item_qwVbR6","item_QnUfG4","item_NAAGDC"],"name":"Text with icons","settings":{"full_width":true,"stack_on_mobile":false,"title":"","heading_tag":"h5","text_alignment":"center","icon_spacing":"medium","background":"","background_gradient":"","text_color":""}},"17809541647b9faf1f":{"type":"_blocks","settings":{}},"1780954453df457f46":{"type":"_blocks","settings":{}},"ss_testimonial_12_DkG6Ur":{"type":"ss-testimonial-12","blocks":{"slide_Hy9Q7K":{"type":"slide","settings":{"media_style":"none","video_url":"","controls":false,"stars_count":5,"text":"<p>Spodnie idealne! Len miękki, krój świetny. Zamówię więcej kolorów.<\/p>","author":"<p><strong>Magda K. — Warszawa<\/strong><\/p>"}},"slide_eFQKmU":{"type":"slide","settings":{"media_style":"none","video_url":"","controls":false,"stars_count":5,"text":"<p>Koszula lniana na urlop — strzał w dziesiątkę. Przewiewna i elegancka.<\/p>","author":"<p><strong>Tomasz  — Kraków<\/strong><\/p>"}},"slide_Urq4DQ":{"type":"slide","settings":{"media_style":"none","video_url":"","controls":false,"stars_count":5,"text":"<p>Bluzka przepiękna, materiał delikatny. Noszę do pracy i na spotkania.<\/p>","author":"<p><strong>Anna — Gdańsk<\/strong><\/p>"}},"slide_j8DxPk":{"type":"slide","settings":{"media_style":"none","video_url":"","controls":false,"stars_count":4,"text":"<p>Marynarka bardzo elegancka. Dostawa trwała 9 dni — mogłoby być szybciej.<\/p>","author":"<p><strong>Marek — Wrocław<\/strong><\/p>"}},"slide_nA8kpr":{"type":"slide","settings":{"media_style":"none","video_url":"","controls":false,"stars_count":5,"text":"<p>Wysoki stan wyszczupla sylwetkę. Jakość lepsza niż się spodziewałam.<\/p>","author":"<p><strong>Katarzyna — Poznań<\/strong><\/p>"}},"slide_DwNY6X":{"type":"slide","settings":{"media_style":"none","video_url":"","controls":false,"stars_count":4,"text":"<p>Trzecia koszula z tego sklepu. Zawsze dobra jakość, polecam.<\/p>","author":"<p><strong>Piotr — Łódź<\/strong><\/p>"}},"slide_EdTjcC":{"type":"slide","settings":{"media_style":"none","video_url":"","controls":false,"stars_count":3,"text":"<p>Bluzka ładna ale rozmiar trochę mały. Następnym razem zamówię L zamiast M<\/p>","author":"<p><strong>Joanna — Kraków<\/strong><\/p>"}}},"block_order":["slide_Hy9Q7K","slide_eFQKmU","slide_Urq4DQ","slide_j8DxPk","slide_nA8kpr","slide_DwNY6X","slide_EdTjcC"],"name":"SS - Testimonials #12","settings":{"heading":"<h2><strong>Co mówią nasi klienci<\/strong><\/h2>","heading_custom":false,"heading_font":"josefin_sans_n4","heading_size":30,"heading_size_mobile":22,"heading_height":130,"heading_align":"center","heading_align_mobile":"center","sub_heading":"","sub_heading_custom":false,"sub_heading_font":"josefin_sans_n4","sub_heading_size":30,"sub_heading_size_mobile":22,"sub_heading_height":150,"sub_heading_mt":12,"sub_heading_align":"left","sub_heading_align_mobile":"left","slider_view":5,"slider_view_mobile":1.3,"slider_gap":28,"slider_gap_mobile":20,"slider_mt":20,"autoplay":false,"autoplay_delay":5,"card_padding_vertical":20,"card_padding_vertical_mobile":16,"card_padding_horizontal":20,"card_padding_horizontal_mobile":16,"card_radius":20,"card_border_thickness":1,"card_shadow":false,"media_radius":20,"media_border_thickness":0,"media_ratio":"square","media_ratio_mobile":"square","content_padding_vertical":0,"content_padding_vertical_mobile":0,"content_padding_horizontal":0,"content_padding_horizontal_mobile":0,"hide_content":false,"stars_size":16,"stars_mt":12,"stars_align":"start","stars_align_mobile":"start","text_custom":false,"text_font":"josefin_sans_n4","text_size":16,"text_size_mobile":16,"text_height":130,"text_mt":12,"text_align":"left","text_align_mobile":"left","author_custom":false,"author_font":"josefin_sans_n4","author_size":14,"author_size_mobile":14,"author_height":130,"author_mt":12,"author_align":"left","author_align_mobile":"left","navigation_mt":40,"navigation_gap":20,"navigation_align":"center","navigation_align_mobile":"center","arrow_size":50,"arrow_size_mobile":50,"arrow_show_desktop":true,"arrow_show_mobile":true,"dots_size":10,"dots_size_mobile":10,"dots_show_desktop":true,"dots_show_mobile":true,"btn_icon_size":50,"btn_icon_size_mobile":40,"card_bg_color":"#ffffff","card_bg_gradient":"","card_border_color":"#f0ece4","media_border_color":"#6c2d31","stars_color":"#6c2d31","text_color":"#6c2d31","author_color":"#6c2d31","video_icon_bg_color":"#ffffff","video_icon_color":"#121212","arrow_color":"#6c2d31","arrow_hover_color":"#6c2d31","dots_color":"#6c2d31","heading_color":"#6c2d31","sub_heading_color":"#6c2d31","background_color":"#f0ece4","background_gradient":"","border_color":"#121212","margin_top":0,"margin_bottom":0,"padding_top":36,"padding_bottom":36,"padding_horizontal":5,"padding_horizontal_mobile":1.5,"full_width":true,"content_width":1200,"border_thickness":0,"lazy":true}},"1780954490242fcaab":{"type":"_blocks","settings":{}}},"order":["slideshow","featured_collection_dpjWJ3","featured_collection_ryCrMC","178344819491f398b0","17805715688845ca6d","featured_collection_VK4pQV","blocks_xA4Hnh","blocks_RyRfDh","17807585870242c993","1780759419e837e8b3","collection_list_VEcQxQ","custom_liquid_hRFagD","text_with_icons_Y38QtN","17809541647b9faf1f","1780954453df457f46","ss_testimonial_12_DkG6Ur","1780954490242fcaab"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_7_sep_2026_15_50_54.png",
+            "content_max_width": 400,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "COLLEZIONE AUTUNNALE 2026",
+            "title": "Lo stile che si adatta alla tua vita",
+            "heading_tag": "h2",
+            "button_text": "Scopri la collezione",
+            "button_link": "shopify://collections/all",
+            "text_color": "#f7f3eb",
+            "button_background": "#6c2d31",
+            "button_text_color": "#f7f3eb",
+            "overlay_color": "#1a1a1a",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide-1"
+      ],
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "numbers",
+        "transition_type": "fade_with_text",
+        "autoplay": true,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": "linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"
+      }
+    },
+    "featured_collection_dpjWJ3": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "Featured collection",
+      "settings": {
+        "collection": "sandaly-damskie",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 4,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "Sandały damskie",
+        "content": "",
+        "link_url": "shopify://collections/sandaly-damskie",
+        "link_text": "ZOBACZ WSZYSTKO",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "featured_collection_ryCrMC": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "marek-koszula-lniana-meska-lekka-koszula-codzienna-z-dlugim-rekawem-w-naturalnym-kolorze",
+          "laura-spodnie-damskie-z-wysokim-stanem-wygodne-spodnie-z-szerokimi-nogawkami-do-codziennego-uzytku",
+          "hania-bluzka-damska-bez-rekawow-elegancka-bluzka-z-drapowanym-dekoltem",
+          "lena-sandaly-damskie-na-slupku-eleganckie-czarne-sandaly-na-kazda-okazje"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 4,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "Smart Casual dla Niego i dla Niej",
+        "content": "",
+        "link_url": "shopify://collections/all",
+        "link_text": "ZOBACZ WSZYSTKO",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "178344819491f398b0": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_2a697ec_hitXKJ": {
+          "type": "ai_gen_block_2a697ec",
+          "settings": {
+            "label_1": "SUKIENKI",
+            "link_1": "shopify://collections/sukienki",
+            "label_2": "MARYNARKI DAMSKIE",
+            "link_2": "shopify://collections/marynarki-damskie",
+            "label_3": "TOPY I BLUZKI DAMSKIE",
+            "link_3": "shopify://collections/topy-i-bluzki-damskie",
+            "image_aspect_ratio": "2/3",
+            "image_gap": 4,
+            "mobile_gap": 4,
+            "font": "assistant_n4",
+            "label_font_size": 14,
+            "label_padding": 10,
+            "label_offset": 20,
+            "label_border_radius": 0,
+            "label_background": "#ffffff",
+            "label_text_color": "#000000",
+            "show_arrows": false,
+            "arrow_size": 50,
+            "arrow_offset": 20,
+            "arrow_background": "#000000",
+            "arrow_color": "#ffffff",
+            "background_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_2a697ec_xTTeU6": {
+          "type": "ai_gen_block_2a697ec",
+          "settings": {
+            "label_1": "SPODNIE DAMSKIE",
+            "link_1": "shopify://collections/spodnie-damskie",
+            "label_2": "SANDAŁY DAMSKIE",
+            "link_2": "shopify://collections/sandaly-damskie",
+            "label_3": "BUTY DAMSKIE",
+            "link_3": "shopify://collections/buty-damskie",
+            "image_aspect_ratio": "2/3",
+            "image_gap": 4,
+            "mobile_gap": 4,
+            "font": "assistant_n4",
+            "label_font_size": 14,
+            "label_padding": 10,
+            "label_offset": 20,
+            "label_border_radius": 0,
+            "label_background": "#ffffff",
+            "label_text_color": "#000000",
+            "show_arrows": false,
+            "arrow_size": 50,
+            "arrow_offset": 20,
+            "arrow_background": "#000000",
+            "arrow_color": "#ffffff",
+            "background_color": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_2a697ec_hitXKJ",
+        "ai_gen_block_2a697ec_xTTeU6"
+      ],
+      "settings": {}
+    },
+    "17805715688845ca6d": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "featured_collection_VK4pQV": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "koszule-meskie",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 4,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "Koszule męskie",
+        "content": "",
+        "link_url": "shopify://collections/koszule-meskie",
+        "link_text": "ZOBACZ WSZYSTKO",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "blocks_xA4Hnh": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_2a697ec_UamLUe": {
+          "type": "ai_gen_block_2a697ec",
+          "settings": {
+            "label_1": "GARNITURY MĘSKIE",
+            "link_1": "shopify://collections/garnitury-meskie",
+            "label_2": "KOSZULE MĘSKIE",
+            "link_2": "",
+            "label_3": "MARYNARKI MĘSKIE",
+            "link_3": "shopify://collections/szorty-lniane-meskie",
+            "image_aspect_ratio": "2/3",
+            "image_gap": 4,
+            "mobile_gap": 4,
+            "font": "assistant_n4",
+            "label_font_size": 14,
+            "label_padding": 10,
+            "label_offset": 20,
+            "label_border_radius": 0,
+            "label_background": "#ffffff",
+            "label_text_color": "#000000",
+            "show_arrows": false,
+            "arrow_size": 50,
+            "arrow_offset": 20,
+            "arrow_background": "#000000",
+            "arrow_color": "#ffffff",
+            "background_color": "#ffffff"
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_2a697ec_DtybjW": {
+          "type": "ai_gen_block_2a697ec",
+          "settings": {
+            "label_1": "SPODNIE MĘSKIE",
+            "link_1": "shopify://collections/spodnie-meskie",
+            "label_2": "OBUWIE MĘSKIE",
+            "link_2": "shopify://collections/buty-meskie",
+            "label_3": "MĘSKI KOMPLET",
+            "link_3": "shopify://collections/meski-komplet-lniany-szorty",
+            "image_aspect_ratio": "2/3",
+            "image_gap": 4,
+            "mobile_gap": 4,
+            "font": "assistant_n4",
+            "label_font_size": 14,
+            "label_padding": 10,
+            "label_offset": 20,
+            "label_border_radius": 0,
+            "label_background": "#ffffff",
+            "label_text_color": "#000000",
+            "show_arrows": false,
+            "arrow_size": 50,
+            "arrow_offset": 20,
+            "arrow_background": "#000000",
+            "arrow_color": "#ffffff",
+            "background_color": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_2a697ec_UamLUe",
+        "ai_gen_block_2a697ec_DtybjW"
+      ],
+      "settings": {}
+    },
+    "blocks_RyRfDh": {
+      "type": "_blocks",
+      "name": "Featured collections",
+      "settings": {}
+    },
+    "17807585870242c993": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1780759419e837e8b3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5fd3cb8_xkGTAw": {
+          "type": "ai_gen_block_5fd3cb8",
+          "settings": {
+            "section_background": "#f7f3eb",
+            "heading": "Dołącz do ponad 3000 zadowolonych klientek",
+            "heading_font": "serif",
+            "heading_size_mobile": 20,
+            "heading_size_desktop": 50,
+            "subheading": "Elegancja, komfort i styl w jednym miejscu — w cenach, które nie zrujnują budżetu. Ubierz się tak, jak czujesz się w środku.",
+            "subheading_font": "system_ui_n4",
+            "subheading_size_mobile": 13,
+            "subheading_size_desktop": 23,
+            "text_color": "#f7f3eb",
+            "text_position_bottom": 50,
+            "show_badge": false,
+            "badge_text": "",
+            "badge_background": "#f7f3eb",
+            "badge_text_color": "#1a1a1a",
+            "badge_size": 80,
+            "badge_size_desktop": 120,
+            "badge_text_size": 12,
+            "badge_text_size_desktop": 16,
+            "badge_position_top": 20,
+            "badge_position_right": 20,
+            "button_label": "Odkryj kolekcję",
+            "button_link": "shopify://collections/all",
+            "button_background": "#6c2d31",
+            "button_text_color": "#f7f3eb",
+            "button_hover_background": "#4a1f22",
+            "button_hover_text_color": "#f7f3eb",
+            "button_text_size": 16,
+            "button_padding_vertical": 16,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "button_spacing_top": 40,
+            "button_spacing_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5fd3cb8_xkGTAw"
+      ],
+      "settings": {}
+    },
+    "collection_list_VEcQxQ": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_HgXFBF": {
+          "type": "collection",
+          "settings": {
+            "collection": "spodnie-meskie",
+            "subheading": "",
+            "title": "",
+            "url": "shopify://collections/kurtki-i-plaszcze-1",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_iwQ9bJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "koszulki-meskie",
+            "subheading": "",
+            "title": "",
+            "url": "shopify://collections/swetry-i-bluzy",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_QDqL9r": {
+          "type": "collection",
+          "settings": {
+            "collection": "obuwie-meskie",
+            "subheading": "",
+            "title": "",
+            "url": "shopify://collections/kurtki-wodoodporne",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_BqGGnT": {
+          "type": "collection",
+          "settings": {
+            "collection": "garnitury",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_CxcnaY": {
+          "type": "collection",
+          "settings": {
+            "collection": "kurtki-i-plaszcze-meskie",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_V7CPw9": {
+          "type": "collection",
+          "settings": {
+            "collection": "swetry-i-kardigany-dla-mezczyzn",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h4",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_HgXFBF",
+        "collection_iwQ9bJ",
+        "collection_QDqL9r",
+        "collection_BqGGnT",
+        "collection_CxcnaY",
+        "collection_V7CPw9"
+      ],
+      "disabled": true,
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 3,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "KOLEKCJE MĘSKIE 2026",
+        "content": "",
+        "link_url": "shopify://collections/kolekcja-meska",
+        "link_text": "ZOBACZ WSZYSTKO",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "custom_liquid_hRFagD": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "text_with_icons_Y38QtN": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_XqVaFU": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-shield",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "BEZPIECZNE PŁATNOŚCI",
+            "content": "<p>Bardzo cenimy Twoje bezpieczeństwo i wygodę!</p>"
+          }
+        },
+        "item_qwVbR6": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-truck",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "DARMOWA WYSYŁKA",
+            "content": "<p>NA WSZYSTKIE ZAMÓWIENIA NA TERENIE POLSKI</p>"
+          }
+        },
+        "item_QnUfG4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-return",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "ŁATWY ZWROT!",
+            "content": "<p>Rozpocznij zwrot w ciągu 30 dni od otrzymania produktu!</p>"
+          }
+        },
+        "item_NAAGDC": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-question",
+            "mobile_icon_width": 24,
+            "icon_width": 32,
+            "icon_background_type": "circle",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "MASZ PYTANIE?",
+            "content": "<p>Obsługa klienta dostępna 7 dni w tygodniu.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_XqVaFU",
+        "item_qwVbR6",
+        "item_QnUfG4",
+        "item_NAAGDC"
+      ],
+      "name": "Text with icons",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h5",
+        "text_alignment": "center",
+        "icon_spacing": "medium",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "17809541647b9faf1f": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1780954453df457f46": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "ss_testimonial_12_DkG6Ur": {
+      "type": "ss-testimonial-12",
+      "blocks": {
+        "slide_Hy9Q7K": {
+          "type": "slide",
+          "settings": {
+            "media_style": "none",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>Spodnie idealne! Len miękki, krój świetny. Zamówię więcej kolorów.</p>",
+            "author": "<p><strong>Magda K. — Warszawa</strong></p>"
+          }
+        },
+        "slide_eFQKmU": {
+          "type": "slide",
+          "settings": {
+            "media_style": "none",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>Koszula lniana na urlop — strzał w dziesiątkę. Przewiewna i elegancka.</p>",
+            "author": "<p><strong>Tomasz  — Kraków</strong></p>"
+          }
+        },
+        "slide_Urq4DQ": {
+          "type": "slide",
+          "settings": {
+            "media_style": "none",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>Bluzka przepiękna, materiał delikatny. Noszę do pracy i na spotkania.</p>",
+            "author": "<p><strong>Anna — Gdańsk</strong></p>"
+          }
+        },
+        "slide_j8DxPk": {
+          "type": "slide",
+          "settings": {
+            "media_style": "none",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 4,
+            "text": "<p>Marynarka bardzo elegancka. Dostawa trwała 9 dni — mogłoby być szybciej.</p>",
+            "author": "<p><strong>Marek — Wrocław</strong></p>"
+          }
+        },
+        "slide_nA8kpr": {
+          "type": "slide",
+          "settings": {
+            "media_style": "none",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>Wysoki stan wyszczupla sylwetkę. Jakość lepsza niż się spodziewałam.</p>",
+            "author": "<p><strong>Katarzyna — Poznań</strong></p>"
+          }
+        },
+        "slide_DwNY6X": {
+          "type": "slide",
+          "settings": {
+            "media_style": "none",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 4,
+            "text": "<p>Trzecia koszula z tego sklepu. Zawsze dobra jakość, polecam.</p>",
+            "author": "<p><strong>Piotr — Łódź</strong></p>"
+          }
+        },
+        "slide_EdTjcC": {
+          "type": "slide",
+          "settings": {
+            "media_style": "none",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 3,
+            "text": "<p>Bluzka ładna ale rozmiar trochę mały. Następnym razem zamówię L zamiast M</p>",
+            "author": "<p><strong>Joanna — Kraków</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Hy9Q7K",
+        "slide_eFQKmU",
+        "slide_Urq4DQ",
+        "slide_j8DxPk",
+        "slide_nA8kpr",
+        "slide_DwNY6X",
+        "slide_EdTjcC"
+      ],
+      "name": "SS - Testimonials #12",
+      "settings": {
+        "heading": "<h2><strong>Co mówią nasi klienci</strong></h2>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 30,
+        "heading_size_mobile": 22,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_align_mobile": "center",
+        "sub_heading": "",
+        "sub_heading_custom": false,
+        "sub_heading_font": "josefin_sans_n4",
+        "sub_heading_size": 30,
+        "sub_heading_size_mobile": 22,
+        "sub_heading_height": 150,
+        "sub_heading_mt": 12,
+        "sub_heading_align": "left",
+        "sub_heading_align_mobile": "left",
+        "slider_view": 5,
+        "slider_view_mobile": 1.3,
+        "slider_gap": 28,
+        "slider_gap_mobile": 20,
+        "slider_mt": 20,
+        "autoplay": false,
+        "autoplay_delay": 5,
+        "card_padding_vertical": 20,
+        "card_padding_vertical_mobile": 16,
+        "card_padding_horizontal": 20,
+        "card_padding_horizontal_mobile": 16,
+        "card_radius": 20,
+        "card_border_thickness": 1,
+        "card_shadow": false,
+        "media_radius": 20,
+        "media_border_thickness": 0,
+        "media_ratio": "square",
+        "media_ratio_mobile": "square",
+        "content_padding_vertical": 0,
+        "content_padding_vertical_mobile": 0,
+        "content_padding_horizontal": 0,
+        "content_padding_horizontal_mobile": 0,
+        "hide_content": false,
+        "stars_size": 16,
+        "stars_mt": 12,
+        "stars_align": "start",
+        "stars_align_mobile": "start",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 130,
+        "text_mt": 12,
+        "text_align": "left",
+        "text_align_mobile": "left",
+        "author_custom": false,
+        "author_font": "josefin_sans_n4",
+        "author_size": 14,
+        "author_size_mobile": 14,
+        "author_height": 130,
+        "author_mt": 12,
+        "author_align": "left",
+        "author_align_mobile": "left",
+        "navigation_mt": 40,
+        "navigation_gap": 20,
+        "navigation_align": "center",
+        "navigation_align_mobile": "center",
+        "arrow_size": 50,
+        "arrow_size_mobile": 50,
+        "arrow_show_desktop": true,
+        "arrow_show_mobile": true,
+        "dots_size": 10,
+        "dots_size_mobile": 10,
+        "dots_show_desktop": true,
+        "dots_show_mobile": true,
+        "btn_icon_size": 50,
+        "btn_icon_size_mobile": 40,
+        "card_bg_color": "#ffffff",
+        "card_bg_gradient": "",
+        "card_border_color": "#f0ece4",
+        "media_border_color": "#6c2d31",
+        "stars_color": "#6c2d31",
+        "text_color": "#6c2d31",
+        "author_color": "#6c2d31",
+        "video_icon_bg_color": "#ffffff",
+        "video_icon_color": "#121212",
+        "arrow_color": "#6c2d31",
+        "arrow_hover_color": "#6c2d31",
+        "dots_color": "#6c2d31",
+        "heading_color": "#6c2d31",
+        "sub_heading_color": "#6c2d31",
+        "background_color": "#f0ece4",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "1780954490242fcaab": {
+      "type": "_blocks",
+      "settings": {}
+    }
+  },
+  "order": [
+    "slideshow",
+    "featured_collection_dpjWJ3",
+    "featured_collection_ryCrMC",
+    "178344819491f398b0",
+    "17805715688845ca6d",
+    "featured_collection_VK4pQV",
+    "blocks_xA4Hnh",
+    "blocks_RyRfDh",
+    "17807585870242c993",
+    "1780759419e837e8b3",
+    "collection_list_VEcQxQ",
+    "custom_liquid_hRFagD",
+    "text_with_icons_Y38QtN",
+    "17809541647b9faf1f",
+    "1780954453df457f46",
+    "ss_testimonial_12_DkG6Ur",
+    "1780954490242fcaab"
+  ]
+}
