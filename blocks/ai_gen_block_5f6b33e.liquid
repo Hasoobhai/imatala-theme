@@ -1,0 +1,153 @@
+{% doc %}
+  @prompt
+    Add a star rating trust element displayed directly above the product title on the product page. Single line, left-aligned. Layout: 4 full black stars + 1 half black star using CSS clip-path (not Unicode text "1/2") to show a half-filled 5th star. After the stars: text "4,6/5,0 | Na podstawie ponad 2854+ opinii" — underlined, clickable, links to the reviews section anchor (#opinie-klientow) on the same page. Styling: stars solid black #000000 font-size 16px, text 14px black #000000 underlined, no background no border no box, 6px gap between stars and text. Must stay on one line on mobile with same font size. All values (rating number, review count) should be editable in section or block settings.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-star-rating-trust-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .ai-star-rating-stars-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .ai-star-rating-star-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .ai-star-rating-star-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: {{ block.settings.star_color }};
+  }
+
+  .ai-star-rating-star-half-{{ ai_gen_id }} {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+  }
+
+  .ai-star-rating-star-half-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    fill: {{ block.settings.star_color }};
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+
+  .ai-star-rating-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+
+  .ai-star-rating-text-{{ ai_gen_id }}:hover {
+    opacity: 0.8;
+  }
+{% endstyle %}
+
+<div class="ai-star-rating-trust-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-star-rating-stars-{{ ai_gen_id }}">
+    {% for i in (1..4) %}
+      <span class="ai-star-rating-star-{{ ai_gen_id }}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      </span>
+    {% endfor %}
+    <span class="ai-star-rating-star-half-{{ ai_gen_id }}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+    </span>
+  </div>
+  <a href="#opinie-klientow" class="ai-star-rating-text-{{ ai_gen_id }}">
+    {{ block.settings.rating_display }}/{{ block.settings.rating_max }} | {{ block.settings.review_text_prefix }} {{ block.settings.review_count }}{{ block.settings.review_text_suffix }}
+  </a>
+</div>
+
+{% schema %}
+{
+  "name": "Star rating trust",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Rating"
+    },
+    {
+      "type": "text",
+      "id": "rating_display",
+      "label": "Rating number",
+      "default": "4,6"
+    },
+    {
+      "type": "text",
+      "id": "rating_max",
+      "label": "Maximum rating",
+      "default": "5,0"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review count",
+      "default": "2854+"
+    },
+    {
+      "type": "text",
+      "id": "review_text_prefix",
+      "label": "Text before count",
+      "default": "Na podstawie ponad"
+    },
+    {
+      "type": "text",
+      "id": "review_text_suffix",
+      "label": "Text after count",
+      "default": "opinii"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Star rating trust"
+    }
+  ]
+}
+{% endschema %}

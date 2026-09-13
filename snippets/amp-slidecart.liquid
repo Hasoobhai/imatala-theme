@@ -1,0 +1,19 @@
+<style>
+  #slidecarthq .rewards .rewards-tiers-labels .rewards-tiers-labels-item .rewards-tiers-labels-item-amount {
+    white-space: nowrap;
+  }
+</style>
+<script>
+  function scTranslateRewardLabels() {
+    const newLabelText = 'produkty';
+
+    const scRewardLabels = document.querySelectorAll('#slidecarthq .rewards .rewards-tiers-labels-item .rewards-tiers-labels-item-amount');
+    scRewardLabels.forEach((label) => {
+      label.textContent = label.textContent.replace('items', newLabelText);
+    });
+  }
+
+  window.SLIDECART_UPDATED = (cart) => {
+    scTranslateRewardLabels();
+  };
+</script>

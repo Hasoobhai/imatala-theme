@@ -1,0 +1,345 @@
+{% doc %}
+  @prompt
+    "Please add a promotional banner section at the top of my collection pages, directly below the collection header. It should look exactly like this and match my website's warm cream color scheme.
+    Section layout (top to bottom):
+    Part 1 — Sale announcement:
+    
+    Bold uppercase heading: NAJWIĘKSZA LETNIA WYPRZEDAŻ
+    Subtext below: Dla naszych wiernych klientów — do 50% zniżki na ulubione style. Ograniczone ilości, bez uzupełniania zapasów w tych cenach.
+    Third line in small bold uppercase with dots between: SPRZEDAJE SIĘ SZYBKO · ŁĄCZ DOWOLNE STYLE · ZNIŻKA NALICZANA AUTOMATYCZNIE
+    
+    Part 2 — Stack & Save block (light background, rounded corners, full width):
+    
+    Bold uppercase heading centered: WIĘCEJ OSZCZĘDZASZ, WIĘCEJ ZYSKUJESZ
+    Subheading: IM WIĘCEJ ZAMAWIASZ, TYM WIĘCEJ ZOSTAWIASZ W PORTFELU
+    4 cards side by side (2 cards on mobile), each with:
+    
+    Dark pill badge at top (bordeaux #6c2d31): BUY 2 / BUY 3 / BUY 4 / BUY 5+
+    Text: EXTRA
+    Large bold percentage: 10% / 15% / 20% / 25%
+    Text: OFF
+    Bold label below: Idealny duet / Najlepsza wartość / Ulubiony wybór / EKSKLUZYWNA OFERTA VIP
+    
+    
+    Small grey text at bottom: Zniżka naliczana automatycznie przy kasie. Łącz produkty ze wszystkich kolekcji Kowalski.
+    
+    Color scheme to match my website:
+    
+    Page background: #f0ece4 (warm cream)
+    Stack & Save block background: #e8e0d5 (slightly darker warm beige)
+    Cards background: #f0ece4
+    Card border: 1px solid #d4c9bc
+    Badge background: #6c2d31 (bordeaux)
+    Badge text: #f0ece4
+    All text: #1a1a1a
+    Percentage color: #6c2d31
+    Border radius: 8px on block, 6px on cards
+    
+    Typography:
+    
+    Section heading: bold, uppercase, serif feel
+    Subtext: regular weight, centered, grey (#5a4a3a)
+    Card labels: bold, 13px
+    Percentages: very large, bold (40px+)
+    
+    Where to add it:
+    Add this as a Custom Liquid section in the collection template, at the very top before the product grid. It should appear on all collection pages.
+    Mobile:
+    
+    2 cards per row on mobile
+    Font sizes reduce slightly
+    Full width, no horizontal scroll", "Please fix the bundle section — everything must be in Polish. Change the following:
+    
+    BUY 2 → KUP 2
+    BUY 3 → KUP 3
+    BUY 4 → KUP 4
+    BUY 5+ → KUP 5+
+    EXTRA → DODATKOWE
+    OFF → RABATU
+    
+    Keep all colors, layout and styling exactly the same. Just replace the English words with the Polish translations above."
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-promo-banner-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: #f0ece4;
+    padding: 40px 20px;
+  }
+
+  .ai-promo-banner__container-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .ai-promo-banner__sale-section-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ai-promo-banner__main-heading-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+  }
+
+  .ai-promo-banner__subtext-{{ ai_gen_id }} {
+    font-size: 16px;
+    color: #5a4a3a;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ai-promo-banner__details-{{ ai_gen_id }} {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-promo-banner__stack-save-{{ ai_gen_id }} {
+    background-color: #e8e0d5;
+    border-radius: 8px;
+    padding: 40px 30px;
+    margin-top: 40px;
+  }
+
+  .ai-promo-banner__stack-heading-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+  }
+
+  .ai-promo-banner__stack-subheading-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: #5a4a3a;
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-weight: 500;
+  }
+
+  .ai-promo-banner__cards-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .ai-promo-banner__card-{{ ai_gen_id }} {
+    background-color: #f0ece4;
+    border: 1px solid #d4c9bc;
+    border-radius: 6px;
+    padding: 24px 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ai-promo-banner__badge-{{ ai_gen_id }} {
+    background-color: #6c2d31;
+    color: #f0ece4;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-promo-banner__extra-text-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin: 4px 0 0 0;
+  }
+
+  .ai-promo-banner__percentage-{{ ai_gen_id }} {
+    font-size: 48px;
+    font-weight: 700;
+    color: #6c2d31;
+    line-height: 1;
+    margin: 8px 0;
+  }
+
+  .ai-promo-banner__off-text-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+  }
+
+  .ai-promo-banner__label-{{ ai_gen_id }} {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .ai-promo-banner__footer-text-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-promo-banner__main-heading-{{ ai_gen_id }} {
+      font-size: 24px;
+    }
+
+    .ai-promo-banner__subtext-{{ ai_gen_id }} {
+      font-size: 14px;
+    }
+
+    .ai-promo-banner__stack-heading-{{ ai_gen_id }} {
+      font-size: 20px;
+    }
+
+    .ai-promo-banner__stack-subheading-{{ ai_gen_id }} {
+      font-size: 13px;
+    }
+
+    .ai-promo-banner__cards-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .ai-promo-banner__percentage-{{ ai_gen_id }} {
+      font-size: 40px;
+    }
+
+    .ai-promo-banner-{{ ai_gen_id }} {
+      padding: 30px 16px;
+    }
+
+    .ai-promo-banner__stack-save-{{ ai_gen_id }} {
+      padding: 30px 20px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-promo-banner__main-heading-{{ ai_gen_id }} {
+      font-size: 20px;
+    }
+
+    .ai-promo-banner__details-{{ ai_gen_id }} {
+      font-size: 10px;
+    }
+
+    .ai-promo-banner__percentage-{{ ai_gen_id }} {
+      font-size: 36px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-promo-banner-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-promo-banner__container-{{ ai_gen_id }}">
+    <div class="ai-promo-banner__sale-section-{{ ai_gen_id }}">
+      <h2 class="ai-promo-banner__main-heading-{{ ai_gen_id }}">
+        NAJWIĘKSZA LETNIA WYPRZEDAŻ
+      </h2>
+      <p class="ai-promo-banner__subtext-{{ ai_gen_id }}">
+        Dla naszych wiernych klientów — do 50% zniżki na ulubione style. Ograniczone ilości, bez uzupełniania zapasów w tych cenach.
+      </p>
+      <p class="ai-promo-banner__details-{{ ai_gen_id }}">
+        SPRZEDAJE SIĘ SZYBKO · ŁĄCZ DOWOLNE STYLE · ZNIŻKA NALICZANA AUTOMATYCZNIE
+      </p>
+    </div>
+
+    <div class="ai-promo-banner__stack-save-{{ ai_gen_id }}">
+      <h3 class="ai-promo-banner__stack-heading-{{ ai_gen_id }}">
+        WIĘCEJ OSZCZĘDZASZ, WIĘCEJ ZYSKUJESZ
+      </h3>
+      <p class="ai-promo-banner__stack-subheading-{{ ai_gen_id }}">
+        IM WIĘCEJ ZAMAWIASZ, TYM WIĘCEJ ZOSTAWIASZ W PORTFELU
+      </p>
+
+      <div class="ai-promo-banner__cards-grid-{{ ai_gen_id }}">
+        <div class="ai-promo-banner__card-{{ ai_gen_id }}">
+          <div class="ai-promo-banner__badge-{{ ai_gen_id }}">KUP 2</div>
+          <p class="ai-promo-banner__extra-text-{{ ai_gen_id }}">DODATKOWE</p>
+          <div class="ai-promo-banner__percentage-{{ ai_gen_id }}">10%</div>
+          <p class="ai-promo-banner__off-text-{{ ai_gen_id }}">RABATU</p>
+          <p class="ai-promo-banner__label-{{ ai_gen_id }}">Idealny duet</p>
+        </div>
+
+        <div class="ai-promo-banner__card-{{ ai_gen_id }}">
+          <div class="ai-promo-banner__badge-{{ ai_gen_id }}">KUP 3</div>
+          <p class="ai-promo-banner__extra-text-{{ ai_gen_id }}">DODATKOWE</p>
+          <div class="ai-promo-banner__percentage-{{ ai_gen_id }}">15%</div>
+          <p class="ai-promo-banner__off-text-{{ ai_gen_id }}">RABATU</p>
+          <p class="ai-promo-banner__label-{{ ai_gen_id }}">Najlepsza wartość</p>
+        </div>
+
+        <div class="ai-promo-banner__card-{{ ai_gen_id }}">
+          <div class="ai-promo-banner__badge-{{ ai_gen_id }}">KUP 4</div>
+          <p class="ai-promo-banner__extra-text-{{ ai_gen_id }}">DODATKOWE</p>
+          <div class="ai-promo-banner__percentage-{{ ai_gen_id }}">20%</div>
+          <p class="ai-promo-banner__off-text-{{ ai_gen_id }}">RABATU</p>
+          <p class="ai-promo-banner__label-{{ ai_gen_id }}">Ulubiony wybór</p>
+        </div>
+
+        <div class="ai-promo-banner__card-{{ ai_gen_id }}">
+          <div class="ai-promo-banner__badge-{{ ai_gen_id }}">KUP 5+</div>
+          <p class="ai-promo-banner__extra-text-{{ ai_gen_id }}">DODATKOWE</p>
+          <div class="ai-promo-banner__percentage-{{ ai_gen_id }}">25%</div>
+          <p class="ai-promo-banner__off-text-{{ ai_gen_id }}">RABATU</p>
+          <p class="ai-promo-banner__label-{{ ai_gen_id }}">EKSKLUZYWNA OFERTA VIP</p>
+        </div>
+      </div>
+
+      <p class="ai-promo-banner__footer-text-{{ ai_gen_id }}">
+        Zniżka naliczana automatycznie przy kasie. Łącz produkty ze wszystkich kolekcji Kowalski.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Letnia wyprzedaż",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "dm_sans_n4"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Letnia wyprzedaż"
+    }
+  ]
+}
+{% endschema %}

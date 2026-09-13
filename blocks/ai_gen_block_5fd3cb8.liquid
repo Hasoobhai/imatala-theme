@@ -1,0 +1,529 @@
+{% doc %}
+  @prompt
+    Create a new full-width "image with text overlay" section for the homepage with the following layout:
+    
+    - A wide background lifestyle image spanning the full width of the page.
+    - Text overlaid on the image, CENTER-aligned, in light cream (#F7F3EB):
+      • Heading (serif font, large): "Bliv en del af 12.000+ danskere, der har fundet deres stil"
+      • Subheading (sans-serif font, smaller): "Mode til både dame og herre – med fokus på selvtillid, komfort og friheden til at føle dig godt tilpas."
+    - A round badge in the top-right corner of the image: a cream circle (#F7F3EB) with dark text reading "Få 10% rabat".
+    - A call-to-action button placed BELOW the image (not overlaid on it), centered, in burgundy (#6C2D31) with cream text (#F7F3EB), label: "Læs hvad andre siger om Moramero".
+    
+    Requirements:
+    - Both the heading and subheading must be horizontally centered (text-align: center) over the image.
+    - The button must sit underneath the image, centered and clearly visible, outside the image container.
+    - Fully responsive layout.
+    - On-brand: cream background (#F7F3EB), burgundy accents (#6C2D31).
+    - The section should be a Shopify Liquid section with schema settings for: background image, heading text, subheading text, badge text, button label, and button URL., Can you put the text in the bottom center
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-text-overlay-{{ ai_gen_id }} {
+    width: 100%;
+    display: block;
+  }
+
+  .ai-image-text-overlay__container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    background-color: {{ block.settings.section_background }};
+  }
+
+  .ai-image-text-overlay__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ai-image-text-overlay__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-image-text-overlay__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    min-height: 400px;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-image-text-overlay__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 400px;
+  }
+
+  .ai-image-text-overlay__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-image-text-overlay__content-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: {{ block.settings.text_position_bottom }}px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    z-index: 2;
+  }
+
+  .ai-image-text-overlay__heading-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.heading_size_mobile }}px;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+  }
+
+  .ai-image-text-overlay__subheading-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.subheading_size_mobile }}px;
+    line-height: 1.5;
+    margin: 0;
+    font-family: {{ block.settings.subheading_font.family }}, {{ block.settings.subheading_font.fallback_families }};
+    font-weight: {{ block.settings.subheading_font.weight }};
+    font-style: {{ block.settings.subheading_font.style }};
+  }
+
+  .ai-image-text-overlay__badge-{{ ai_gen_id }} {
+    position: absolute;
+    top: {{ block.settings.badge_position_top }}px;
+    right: {{ block.settings.badge_position_right }}px;
+    width: {{ block.settings.badge_size }}px;
+    height: {{ block.settings.badge_size }}px;
+    border-radius: 50%;
+    background-color: {{ block.settings.badge_background }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    padding: 10px;
+  }
+
+  .ai-image-text-overlay__badge-text-{{ ai_gen_id }} {
+    color: {{ block.settings.badge_text_color }};
+    font-size: {{ block.settings.badge_text_size }}px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .ai-image-text-overlay__button-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: {{ block.settings.button_spacing_top }}px 20px {{ block.settings.button_spacing_bottom }}px;
+    background-color: {{ block.settings.section_background }};
+  }
+
+  .ai-image-text-overlay__button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .ai-image-text-overlay__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background }};
+    color: {{ block.settings.button_hover_text_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-image-text-overlay__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size_desktop }}px;
+    }
+
+    .ai-image-text-overlay__subheading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheading_size_desktop }}px;
+    }
+
+    .ai-image-text-overlay__badge-{{ ai_gen_id }} {
+      width: {{ block.settings.badge_size_desktop }}px;
+      height: {{ block.settings.badge_size_desktop }}px;
+    }
+
+    .ai-image-text-overlay__badge-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.badge_text_size_desktop }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-image-text-overlay-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-image-text-overlay__container-{{ ai_gen_id }}">
+    <div class="ai-image-text-overlay__image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.background_image %}
+        <img
+          src="{{ block.settings.background_image | image_url: width: 2000 }}"
+          alt="{{ block.settings.background_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.background_image.width }}"
+          height="{{ block.settings.background_image.height }}"
+          class="ai-image-text-overlay__image-{{ ai_gen_id }}"
+        >
+      {% else %}
+        <div class="ai-image-text-overlay__image-placeholder-{{ ai_gen_id }}">
+          {{ 'lifestyle-1' | placeholder_svg_tag }}
+          <div class="ai-image-text-overlay__empty-state-{{ ai_gen_id }}">
+            Add a background image to get started
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="ai-image-text-overlay__content-{{ ai_gen_id }}">
+        {% if block.settings.heading != blank %}
+          <h2 class="ai-image-text-overlay__heading-{{ ai_gen_id }}">
+            {{ block.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if block.settings.subheading != blank %}
+          <p class="ai-image-text-overlay__subheading-{{ ai_gen_id }}">
+            {{ block.settings.subheading }}
+          </p>
+        {% endif %}
+      </div>
+
+      {% if block.settings.show_badge and block.settings.badge_text != blank %}
+        <div class="ai-image-text-overlay__badge-{{ ai_gen_id }}">
+          <div class="ai-image-text-overlay__badge-text-{{ ai_gen_id }}">
+            {{ block.settings.badge_text }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if block.settings.button_label != blank %}
+      <div class="ai-image-text-overlay__button-wrapper-{{ ai_gen_id }}">
+        <a
+          href="{{ block.settings.button_link }}"
+          class="ai-image-text-overlay__button-{{ ai_gen_id }}"
+        >
+          {{ block.settings.button_label }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with text overlay",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#F7F3EB"
+    },
+    {
+      "type": "header",
+      "content": "Text overlay"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Bliv en del af 12.000+ danskere, der har fundet deres stil"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "serif"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading size (mobile)",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Heading size (desktop)",
+      "min": 30,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Mode til både dame og herre – med fokus på selvtillid, komfort og friheden til at føle dig godt tilpas."
+    },
+    {
+      "type": "font_picker",
+      "id": "subheading_font",
+      "label": "Subheading font",
+      "default": "sans-serif"
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_mobile",
+      "label": "Subheading size (mobile)",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_desktop",
+      "label": "Subheading size (desktop)",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#F7F3EB"
+    },
+    {
+      "type": "range",
+      "id": "text_position_bottom",
+      "label": "Text position from bottom",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_badge",
+      "label": "Show badge",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "Få 10% rabat"
+    },
+    {
+      "type": "color",
+      "id": "badge_background",
+      "label": "Badge background",
+      "default": "#F7F3EB"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Badge text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "badge_size",
+      "label": "Badge size (mobile)",
+      "min": 60,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "badge_size_desktop",
+      "label": "Badge size (desktop)",
+      "min": 80,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "badge_text_size",
+      "label": "Badge text size (mobile)",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "badge_text_size_desktop",
+      "label": "Badge text size (desktop)",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "badge_position_top",
+      "label": "Badge position from top",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "badge_position_right",
+      "label": "Badge position from right",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Læs hvad andre siger om Moramero"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#6C2D31"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#F7F3EB"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button hover background",
+      "default": "#4a1f22"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text color",
+      "default": "#F7F3EB"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "label": "Button text size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Button vertical padding",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Button horizontal padding",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "button_spacing_top",
+      "label": "Button spacing top",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "button_spacing_bottom",
+      "label": "Button spacing bottom",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text overlay"
+    }
+  ]
+}
+{% endschema %}

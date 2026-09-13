@@ -1,0 +1,655 @@
+{% doc %}
+  @prompt
+    Create a custom "Opinie Klientów" (Customer Reviews) section for a Shopify product page with the following design:
+    
+    SECTION HEADER:
+    - Title: "Opinie Klientów" — large, bold, left-aligned
+    - Next to the title: "2854+ OPINII" — small, grey, uppercase
+    - Full-width horizontal divider line below the title row
+    
+    RATING OVERVIEW BLOCK (grey background, full width):
+    - Left side: large bold black number (e.g. "4,6"), below it 4 full stars + 1 half star in black, below that "NA PODSTAWIE 2854+ OPINII" in small uppercase grey text
+    - Right side: vertical bar chart with 5 rows (5 gwiazdek, 4 gwiazdki, 3 gwiazdki, 2 gwiazdki, 1 gwiazdka), each row showing a label, a filled black bar (proportional width on light grey track), and a count number
+    - All values (average rating, total count, bar counts) must be editable in section settings
+    
+    INDIVIDUAL REVIEW CARDS (white background, light grey border, rounded corners):
+    - Top-left: round black avatar circle with first letter of reviewer name in white
+    - Next to avatar: bold reviewer name, date below name (e.g. "11 maja 2026"), green badge "✅ ZWERYFIKOWANY ZAKUP"
+    - Top-right corner: star rating (1–5 black stars)
+    - Below: bold review title
+    - Below title: review text paragraph
+    
+    BLOCKS SYSTEM:
+    - Each review is a separate Shopify theme editor block
+    - Block fields: name (text), date (text), star rating (range 1–5), review title (text), review text (textarea)
+    - Section settings: average rating number, total review count, count for each star level (5,4,3,2,1)
+    
+    LAYOUT & STYLE:
+    - Full width section
+    - Clean minimal design: white and light grey backgrounds, black text only
+    - Mobile responsive: cards stack vertically on mobile (single column), desktop shows 1 or 2 columns
+    - No external dependencies — pure Liquid, HTML, CSS only
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-reviews-section-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 20px;
+  }
+
+  .ai-reviews-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-reviews-header-{{ ai_gen_id }} {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .ai-reviews-title-{{ ai_gen_id }} {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+  }
+
+  .ai-reviews-count-badge-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-reviews-divider-{{ ai_gen_id }} {
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin-bottom: 32px;
+  }
+
+  .ai-reviews-overview-{{ ai_gen_id }} {
+    background-color: #f5f5f5;
+    padding: 32px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+  }
+
+  .ai-reviews-rating-summary-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ai-reviews-avg-rating-{{ ai_gen_id }} {
+    font-size: 56px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .ai-reviews-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .ai-reviews-star-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+    fill: #000000;
+  }
+
+  .ai-reviews-star-half-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-reviews-star-half-{{ ai_gen_id }} svg:first-child {
+    fill: #e0e0e0;
+  }
+
+  .ai-reviews-star-half-{{ ai_gen_id }} svg:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #000000;
+    clip-path: inset(0 50% 0 0);
+  }
+
+  .ai-reviews-total-text-{{ ai_gen_id }} {
+    font-size: 11px;
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-reviews-breakdown-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ai-reviews-bar-row-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 80px 1fr 60px;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .ai-reviews-bar-label-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: #666666;
+  }
+
+  .ai-reviews-bar-track-{{ ai_gen_id }} {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .ai-reviews-bar-fill-{{ ai_gen_id }} {
+    height: 100%;
+    background-color: #000000;
+    transition: width 0.3s ease;
+  }
+
+  .ai-reviews-bar-count-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: #666666;
+    text-align: right;
+  }
+
+  .ai-reviews-cards-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .ai-review-card-{{ ai_gen_id }} {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .ai-review-card-header-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .ai-review-card-author-{{ ai_gen_id }} {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .ai-review-avatar-{{ ai_gen_id }} {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .ai-review-author-info-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ai-review-author-name-{{ ai_gen_id }} {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .ai-review-date-{{ ai_gen_id }} {
+    font-size: 13px;
+    color: #999999;
+  }
+
+  .ai-review-verified-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #00a341;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-review-card-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 2px;
+  }
+
+  .ai-review-card-star-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    fill: #000000;
+  }
+
+  .ai-review-card-star-empty-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    fill: #e0e0e0;
+  }
+
+  .ai-review-title-{{ ai_gen_id }} {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+
+  .ai-review-text-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-reviews-overview-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .ai-reviews-cards-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .ai-reviews-title-{{ ai_gen_id }} {
+      font-size: 24px;
+    }
+
+    .ai-reviews-avg-rating-{{ ai_gen_id }} {
+      font-size: 48px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-reviews-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-reviews-container-{{ ai_gen_id }}">
+    <div class="ai-reviews-header-{{ ai_gen_id }}">
+      <h2 class="ai-reviews-title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+      <span class="ai-reviews-count-badge-{{ ai_gen_id }}">{{ block.settings.total_reviews }}+ OPINII</span>
+    </div>
+
+    <div class="ai-reviews-divider-{{ ai_gen_id }}"></div>
+
+    <div class="ai-reviews-overview-{{ ai_gen_id }}">
+      <div class="ai-reviews-rating-summary-{{ ai_gen_id }}">
+        <div class="ai-reviews-avg-rating-{{ ai_gen_id }}">{{ block.settings.average_rating }}</div>
+        
+        <div class="ai-reviews-stars-{{ ai_gen_id }}">
+          {% assign full_stars = block.settings.average_rating | floor %}
+          {% assign has_half = block.settings.average_rating | modulo: 1 %}
+          
+          {% for i in (1..full_stars) %}
+            <svg class="ai-reviews-star-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          {% endfor %}
+          
+          {% if has_half >= 0.3 %}
+            <div class="ai-reviews-star-half-{{ ai_gen_id }}">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+          {% endif %}
+          
+          {% assign remaining_stars = 5 | minus: full_stars %}
+          {% if has_half >= 0.3 %}
+            {% assign remaining_stars = remaining_stars | minus: 1 %}
+          {% endif %}
+          
+          {% for i in (1..remaining_stars) %}
+            <svg class="ai-reviews-star-{{ ai_gen_id }}" style="fill: #e0e0e0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          {% endfor %}
+        </div>
+
+        <div class="ai-reviews-total-text-{{ ai_gen_id }}">NA PODSTAWIE {{ block.settings.total_reviews }}+ OPINII</div>
+      </div>
+
+      <div class="ai-reviews-breakdown-{{ ai_gen_id }}">
+        {% assign total = block.settings.total_reviews %}
+        
+        <div class="ai-reviews-bar-row-{{ ai_gen_id }}">
+          <div class="ai-reviews-bar-label-{{ ai_gen_id }}">5 gwiazdek</div>
+          <div class="ai-reviews-bar-track-{{ ai_gen_id }}">
+            {% assign percent_5 = block.settings.count_5_stars | times: 100.0 | divided_by: total %}
+            <div class="ai-reviews-bar-fill-{{ ai_gen_id }}" style="width: {{ percent_5 }}%;"></div>
+          </div>
+          <div class="ai-reviews-bar-count-{{ ai_gen_id }}">{{ block.settings.count_5_stars }}</div>
+        </div>
+
+        <div class="ai-reviews-bar-row-{{ ai_gen_id }}">
+          <div class="ai-reviews-bar-label-{{ ai_gen_id }}">4 gwiazdki</div>
+          <div class="ai-reviews-bar-track-{{ ai_gen_id }}">
+            {% assign percent_4 = block.settings.count_4_stars | times: 100.0 | divided_by: total %}
+            <div class="ai-reviews-bar-fill-{{ ai_gen_id }}" style="width: {{ percent_4 }}%;"></div>
+          </div>
+          <div class="ai-reviews-bar-count-{{ ai_gen_id }}">{{ block.settings.count_4_stars }}</div>
+        </div>
+
+        <div class="ai-reviews-bar-row-{{ ai_gen_id }}">
+          <div class="ai-reviews-bar-label-{{ ai_gen_id }}">3 gwiazdki</div>
+          <div class="ai-reviews-bar-track-{{ ai_gen_id }}">
+            {% assign percent_3 = block.settings.count_3_stars | times: 100.0 | divided_by: total %}
+            <div class="ai-reviews-bar-fill-{{ ai_gen_id }}" style="width: {{ percent_3 }}%;"></div>
+          </div>
+          <div class="ai-reviews-bar-count-{{ ai_gen_id }}">{{ block.settings.count_3_stars }}</div>
+        </div>
+
+        <div class="ai-reviews-bar-row-{{ ai_gen_id }}">
+          <div class="ai-reviews-bar-label-{{ ai_gen_id }}">2 gwiazdki</div>
+          <div class="ai-reviews-bar-track-{{ ai_gen_id }}">
+            {% assign percent_2 = block.settings.count_2_stars | times: 100.0 | divided_by: total %}
+            <div class="ai-reviews-bar-fill-{{ ai_gen_id }}" style="width: {{ percent_2 }}%;"></div>
+          </div>
+          <div class="ai-reviews-bar-count-{{ ai_gen_id }}">{{ block.settings.count_2_stars }}</div>
+        </div>
+
+        <div class="ai-reviews-bar-row-{{ ai_gen_id }}">
+          <div class="ai-reviews-bar-label-{{ ai_gen_id }}">1 gwiazdka</div>
+          <div class="ai-reviews-bar-track-{{ ai_gen_id }}">
+            {% assign percent_1 = block.settings.count_1_star | times: 100.0 | divided_by: total %}
+            <div class="ai-reviews-bar-fill-{{ ai_gen_id }}" style="width: {{ percent_1 }}%;"></div>
+          </div>
+          <div class="ai-reviews-bar-count-{{ ai_gen_id }}">{{ block.settings.count_1_star }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-reviews-cards-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% assign name_key = 'review_' | append: i | append: '_name' %}
+        {% assign date_key = 'review_' | append: i | append: '_date' %}
+        {% assign rating_key = 'review_' | append: i | append: '_rating' %}
+        {% assign title_key = 'review_' | append: i | append: '_title' %}
+        {% assign text_key = 'review_' | append: i | append: '_text' %}
+        
+        {% assign reviewer_name = block.settings[name_key] %}
+        {% assign review_date = block.settings[date_key] %}
+        {% assign star_rating = block.settings[rating_key] %}
+        {% assign review_title = block.settings[title_key] %}
+        {% assign review_text = block.settings[text_key] %}
+        
+        {% if reviewer_name != blank %}
+          <div class="ai-review-card-{{ ai_gen_id }}">
+            <div class="ai-review-card-header-{{ ai_gen_id }}">
+              <div class="ai-review-card-author-{{ ai_gen_id }}">
+                <div class="ai-review-avatar-{{ ai_gen_id }}">
+                  {{ reviewer_name | slice: 0 | upcase }}
+                </div>
+                <div class="ai-review-author-info-{{ ai_gen_id }}">
+                  <div class="ai-review-author-name-{{ ai_gen_id }}">{{ reviewer_name }}</div>
+                  <div class="ai-review-date-{{ ai_gen_id }}">{{ review_date }}</div>
+                  <div class="ai-review-verified-{{ ai_gen_id }}">
+                    <span>✅</span>
+                    <span>ZWERYFIKOWANY ZAKUP</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ai-review-card-stars-{{ ai_gen_id }}">
+                {% for j in (1..5) %}
+                  {% if j <= star_rating %}
+                    <svg class="ai-review-card-star-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% else %}
+                    <svg class="ai-review-card-star-empty-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+
+            {% if review_title != blank %}
+              <div class="ai-review-title-{{ ai_gen_id }}">{{ review_title }}</div>
+            {% endif %}
+
+            {% if review_text != blank %}
+              <div class="ai-review-text-{{ ai_gen_id }}">{{ review_text }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Opinie klientów",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Nagłówek sekcji"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Tytuł",
+      "default": "Opinie Klientów"
+    },
+    {
+      "type": "header",
+      "content": "Podsumowanie ocen"
+    },
+    {
+      "type": "range",
+      "id": "average_rating",
+      "label": "Średnia ocena",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "default": 4.6
+    },
+    {
+      "type": "range",
+      "id": "total_reviews",
+      "label": "Łączna liczba opinii",
+      "min": 0,
+      "max": 5000,
+      "step": 50,
+      "default": 2850
+    },
+    {
+      "type": "header",
+      "content": "Rozkład ocen"
+    },
+    {
+      "type": "range",
+      "id": "count_5_stars",
+      "label": "Liczba opinii 5 gwiazdek",
+      "min": 0,
+      "max": 5000,
+      "step": 50,
+      "default": 2350
+    },
+    {
+      "type": "range",
+      "id": "count_4_stars",
+      "label": "Liczba opinii 4 gwiazdki",
+      "min": 0,
+      "max": 5000,
+      "step": 50,
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "count_3_stars",
+      "label": "Liczba opinii 3 gwiazdki",
+      "min": 0,
+      "max": 1000,
+      "step": 10,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "count_2_stars",
+      "label": "Liczba opinii 2 gwiazdki",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "count_1_star",
+      "label": "Liczba opinii 1 gwiazdka",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Opinia 1"
+    },
+    {
+      "type": "text",
+      "id": "review_1_name",
+      "label": "Imię recenzenta",
+      "default": "Anna Kowalska"
+    },
+    {
+      "type": "text",
+      "id": "review_1_date",
+      "label": "Data opinii",
+      "default": "11 maja 2026"
+    },
+    {
+      "type": "range",
+      "id": "review_1_rating",
+      "label": "Ocena gwiazdkowa",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_1_title",
+      "label": "Tytuł opinii",
+      "default": "Świetny produkt!"
+    },
+    {
+      "type": "textarea",
+      "id": "review_1_text",
+      "label": "Treść opinii",
+      "default": "Jestem bardzo zadowolona z zakupu. Produkt spełnił wszystkie moje oczekiwania."
+    },
+    {
+      "type": "header",
+      "content": "Opinia 2"
+    },
+    {
+      "type": "text",
+      "id": "review_2_name",
+      "label": "Imię recenzenta",
+      "default": "Piotr Nowak"
+    },
+    {
+      "type": "text",
+      "id": "review_2_date",
+      "label": "Data opinii",
+      "default": "8 maja 2026"
+    },
+    {
+      "type": "range",
+      "id": "review_2_rating",
+      "label": "Ocena gwiazdkowa",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_2_title",
+      "label": "Tytuł opinii",
+      "default": "Polecam!"
+    },
+    {
+      "type": "textarea",
+      "id": "review_2_text",
+      "label": "Treść opinii",
+      "default": "Wysoka jakość wykonania. Szybka dostawa. Na pewno wrócę po więcej."
+    },
+    {
+      "type": "header",
+      "content": "Opinia 3"
+    },
+    {
+      "type": "text",
+      "id": "review_3_name",
+      "label": "Imię recenzenta",
+      "default": "Katarzyna Wiśniewska"
+    },
+    {
+      "type": "text",
+      "id": "review_3_date",
+      "label": "Data opinii",
+      "default": "5 maja 2026"
+    },
+    {
+      "type": "range",
+      "id": "review_3_rating",
+      "label": "Ocena gwiazdkowa",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "review_3_title",
+      "label": "Tytuł opinii",
+      "default": "Bardzo dobry stosunek jakości do ceny"
+    },
+    {
+      "type": "textarea",
+      "id": "review_3_text",
+      "label": "Treść opinii",
+      "default": "Produkt zgodny z opisem. Jedynie czas dostawy mógłby być krótszy."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Opinie klientów"
+    }
+  ]
+}
+{% endschema %}

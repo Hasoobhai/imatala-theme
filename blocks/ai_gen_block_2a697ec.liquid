@@ -1,0 +1,452 @@
+{% doc %}
+  @prompt
+    Rebuild the homepage with these 5 sections in order:
+    
+    SECTION 1 — Scrolling marquee bar:
+    - Full-width black background bar
+    - White bold uppercase text scrolling right to left, infinitely and smoothly
+    - Text: "HERITAGE. LUXURY. TIMELESS." repeating
+    - Large bold white font (Jost or clean sans-serif)
+    - No padding above/below, edge to edge
+    
+    SECTION 2 — 3-column image grid with category labels (Men's):
+    - 3 tall portrait images side by side, equal width, zero or minimal gap
+    - Each image has a white label button in bottom-left corner
+    - Label style: white background, black bold uppercase text, no border radius, small padding
+    - Labels: CASUAL SETS / MEN LOAFERS / MEN'S SHOES
+    - No image overlay
+    - Left and right navigation arrows
+    - Mobile: stack vertically full width
+    
+    SECTION 3 — 3-image editorial banner (Men):
+    - 3 portrait images side by side, equal width, zero gap
+    - Middle image has semi-transparent dark overlay
+    - Centered on middle image: bold white uppercase heading "MEN'S EVERYDAY OUTFITS"
+    - Below heading: white underlined "Shop Now" link
+    - Left and right navigation arrows
+    - Mobile: stack vertically
+    
+    SECTION 4 — 3-image editorial banner (Women):
+    - Same layout as Section 3
+    - White label buttons bottom-left on each image: WOMEN'S DRESS / WOMEN'S BLAZERS / WOMEN'S BLOUSE
+    - No center overlay text (labels only)
+    - Navigation arrows
+    
+    SECTION 5 — 3-image editorial banner (Women's Suits):
+    - Same layout as Section 3
+    - Middle image overlay text: "WOMEN'S CASUAL SUITS"
+    - Below: white underlined "Shop Now" link
+    
+    Global styles:
+    - Zero padding between sections — edge to edge feel
+    - White background outside image sections
+    - All text uppercase, bold, Jost or clean sans-serif
+    - Navigation arrows: circular, dark background, white arrow icon
+    - Mobile responsive: stack images vertically, labels remain visible
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-label-banner-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-label-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ block.settings.image_gap }}px;
+    width: 100%;
+  }
+
+  .ai-label-item-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: {{ block.settings.image_aspect_ratio }};
+  }
+
+  .ai-label-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-label-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-label-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .ai-label-tag-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: {{ block.settings.label_offset }}px;
+    left: {{ block.settings.label_offset }}px;
+    background-color: {{ block.settings.label_background }};
+    color: {{ block.settings.label_text_color }};
+    padding: {{ block.settings.label_padding }}px {{ block.settings.label_padding | times: 1.5 }}px;
+    font-size: {{ block.settings.label_font_size }}px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: {{ block.settings.label_border_radius }}px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: {{ block.settings.font.family }}, {{ block.settings.font.fallback_families }};
+  }
+
+  .ai-label-nav-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: {{ block.settings.arrow_size }}px;
+    height: {{ block.settings.arrow_size }}px;
+    background-color: {{ block.settings.arrow_background }};
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-label-nav-{{ ai_gen_id }}:hover {
+    opacity: 0.8;
+  }
+
+  .ai-label-nav-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+    stroke: {{ block.settings.arrow_color }};
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .ai-label-nav-left-{{ ai_gen_id }} {
+    left: {{ block.settings.arrow_offset }}px;
+  }
+
+  .ai-label-nav-right-{{ ai_gen_id }} {
+    right: {{ block.settings.arrow_offset }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-label-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-label-tag-{{ ai_gen_id }} {
+      font-size: {{ block.settings.label_font_size | times: 0.85 }}px;
+    }
+
+    .ai-label-nav-{{ ai_gen_id }} {
+      width: {{ block.settings.arrow_size | times: 0.8 }}px;
+      height: {{ block.settings.arrow_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<label-banner-{{ ai_gen_id }} class="ai-label-banner-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-label-grid-{{ ai_gen_id }}">
+    {% for i in (1..3) %}
+      {% liquid
+        assign image_key = 'image_' | append: i
+        assign label_key = 'label_' | append: i
+        assign link_key = 'link_' | append: i
+        assign image = block.settings[image_key]
+        assign label = block.settings[label_key]
+        assign link = block.settings[link_key]
+      %}
+      <div class="ai-label-item-{{ ai_gen_id }}">
+        {% if image %}
+          <img
+            src="{{ image | image_url: width: 800 }}"
+            alt="{{ image.alt | escape }}"
+            loading="lazy"
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+            class="ai-label-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-label-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+        {% if label != blank %}
+          {% if link != blank %}
+            <a href="{{ link }}" class="ai-label-tag-{{ ai_gen_id }}">{{ label }}</a>
+          {% else %}
+            <span class="ai-label-tag-{{ ai_gen_id }}">{{ label }}</span>
+          {% endif %}
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if block.settings.show_arrows %}
+    <button class="ai-label-nav-{{ ai_gen_id }} ai-label-nav-left-{{ ai_gen_id }}" aria-label="Previous">
+      <svg viewBox="0 0 24 24">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="ai-label-nav-{{ ai_gen_id }} ai-label-nav-right-{{ ai_gen_id }}" aria-label="Next">
+      <svg viewBox="0 0 24 24">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  {% endif %}
+</label-banner-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class LabelBanner{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentIndex = 0;
+      }
+
+      connectedCallback() {
+        this.items = this.querySelectorAll('.ai-label-item-{{ ai_gen_id }}');
+        this.prevButton = this.querySelector('.ai-label-nav-left-{{ ai_gen_id }}');
+        this.nextButton = this.querySelector('.ai-label-nav-right-{{ ai_gen_id }}');
+
+        if (this.prevButton && this.nextButton) {
+          this.prevButton.addEventListener('click', () => this.navigate(-1));
+          this.nextButton.addEventListener('click', () => this.navigate(1));
+        }
+      }
+
+      navigate(direction) {
+        this.currentIndex = (this.currentIndex + direction + this.items.length) % this.items.length;
+        this.items[this.currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+
+    customElements.define('label-banner-{{ ai_gen_id }}', LabelBanner{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Labeled image banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "label_1",
+      "label": "Label 1",
+      "default": "WOMEN'S DRESS"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "label_2",
+      "label": "Label 2",
+      "default": "WOMEN'S BLAZERS"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "label_3",
+      "label": "Label 3",
+      "default": "WOMEN'S BLOUSE"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Link 3"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "options": [
+        { "value": "2/3", "label": "Portrait (2:3)" },
+        { "value": "3/4", "label": "Portrait (3:4)" },
+        { "value": "1/1", "label": "Square (1:1)" },
+        { "value": "4/3", "label": "Landscape (4:3)" }
+      ],
+      "default": "2/3"
+    },
+    {
+      "type": "range",
+      "id": "image_gap",
+      "label": "Gap between images",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Mobile gap",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Labels"
+    },
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Font",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "range",
+      "id": "label_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "label_padding",
+      "label": "Padding",
+      "min": 6,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "label_offset",
+      "label": "Offset from edge",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "label_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "label_background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "label_text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "label": "Arrow size",
+      "min": 30,
+      "max": 70,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "arrow_offset",
+      "label": "Arrow offset from edge",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "arrow_background",
+      "label": "Arrow background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Arrow color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Labeled image banner"
+    }
+  ]
+}
+{% endschema %}

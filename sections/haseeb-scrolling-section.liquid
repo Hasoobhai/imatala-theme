@@ -1,0 +1,132 @@
+<style>
+  .scrolling-section-{{ section.id }} {
+    margin: 0;
+    background-color: #ffffff;
+  }
+
+  .scrolling-container-{{ section.id }} {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .scrolling-heading-{{ section.id }} {
+    font-size: 24px;
+    color: #000;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .scrolling-wrapper-{{ section.id }} {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .scrolling-track-{{ section.id }} {
+    display: flex;
+    gap: 10px;
+    animation: scroll-{{ section.id }} {{ section.settings.animation_speed }}s linear infinite;
+  }
+
+  .scrolling-item-{{ section.id }} {
+    flex: 0 0 250px;
+    height: 250px;
+  }
+
+  .scrolling-item-{{ section.id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  @keyframes scroll-{{ section.id }} {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @media (min-width: 768px) {
+    .scrolling-heading-{{ section.id }} { font-size: 32px; }
+    .scrolling-item-{{ section.id }} {
+      flex: 0 0 300px;
+      height: 300px;
+    }
+  }
+</style>
+
+<div class="scrolling-section-{{ section.id }}">
+  <div class="scrolling-container-{{ section.id }}">
+    {% if section.settings.heading != blank %}
+      <h2 class="scrolling-heading-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    {% endif %}
+    
+    {% if section.blocks.size > 0 %}
+      <div class="scrolling-wrapper-{{ section.id }}">
+        <div class="scrolling-track-{{ section.id }}">
+          {% for block in section.blocks %}
+            <div class="scrolling-item-{{ section.id }}" {{ block.shopify_attributes }}>
+              {% if block.settings.image %}
+                <img src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt | escape }}" loading="lazy">
+              {% else %}
+                <img src="{{ 'placeholder.png' | asset_url }}" alt="Placeholder" loading="lazy">
+              {% endif %}
+            </div>
+          {% endfor %}
+          {% comment %} Duplicate items for seamless scrolling {% endcomment %}
+          {% for block in section.blocks %}
+            <div class="scrolling-item-{{ section.id }}" {{ block.shopify_attributes }}>
+              {% if block.settings.image %}
+                <img src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt | escape }}" loading="lazy">
+              {% else %}
+                <img src="{{ 'placeholder.png' | asset_url }}" alt="Placeholder" loading="lazy">
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "🔥Scrolling Image Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Featured Images"
+    },
+    {
+      "type": "range",
+      "id": "animation_speed",
+      "label": "Animation Speed (seconds)",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "🔥Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "🔥Scrolling Image Section",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
