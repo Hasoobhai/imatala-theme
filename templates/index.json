@@ -211,10 +211,13 @@
         "ai_gen_block_2a697ec_UamLUe": {
           "type": "ai_gen_block_2a697ec",
           "settings": {
+            "image_1": "shopify://shop_images/ChatGPT_Image_8_sep_2026_20_26_24_1.png",
             "label_1": "GARNITURY MĘSKIE",
             "link_1": "shopify://collections/garnitury-meskie",
+            "image_2": "shopify://shop_images/ChatGPT_Image_8_sep_2026_20_28_43_398f665a-6784-4a3f-ba61-0ce0a49e81c6.png",
             "label_2": "KOSZULE MĘSKIE",
             "link_2": "",
+            "image_3": "shopify://shop_images/ChatGPT_Image_8_sep_2026_20_31_13_36c5fcd6-f474-4a00-8010-9716afe17a14.png",
             "label_3": "MARYNARKI MĘSKIE",
             "link_3": "shopify://collections/szorty-lniane-meskie",
             "image_aspect_ratio": "2/3",
@@ -239,10 +242,13 @@
         "ai_gen_block_2a697ec_DtybjW": {
           "type": "ai_gen_block_2a697ec",
           "settings": {
+            "image_1": "shopify://shop_images/ChatGPT_Image_8_sep_2026_20_35_26_1bdda776-0cba-4698-ae9c-5c6686917a9f.png",
             "label_1": "SPODNIE MĘSKIE",
             "link_1": "shopify://collections/spodnie-meskie",
+            "image_2": "shopify://shop_images/ChatGPT_Image_8_sep_2026_20_33_19_e34f82de-b27f-4048-8f38-9f1af1b802ef.png",
             "label_2": "OBUWIE MĘSKIE",
             "link_2": "shopify://collections/buty-meskie",
+            "image_3": "shopify://shop_images/ChatGPT_Image_8_sep_2026_20_36_00_c4e93a0b-eb61-4e55-9ccc-0917b553b36e.png",
             "label_3": "MĘSKI KOMPLET",
             "link_3": "shopify://collections/meski-komplet-lniany-szorty",
             "image_aspect_ratio": "2/3",
