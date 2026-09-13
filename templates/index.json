@@ -109,8 +109,9 @@
         "ai_gen_block_2a697ec_hitXKJ": {
           "type": "ai_gen_block_2a697ec",
           "settings": {
-            "label_1": "SUKIENKI",
-            "link_1": "shopify://collections/sukienki",
+            "image_1": "shopify://shop_images/ChatGPT_Image_8_sep_2026_13_21_23_ec296191-efc0-4000-8081-78af0a413691.png",
+            "label_1": "",
+            "link_1": "shopify://collections",
             "label_2": "MARYNARKI DAMSKIE",
             "link_2": "shopify://collections/marynarki-damskie",
             "label_3": "TOPY I BLUZKI DAMSKIE",
