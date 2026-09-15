@@ -21,8 +21,8 @@
         "item_XH7JYa": {
           "type": "item",
           "settings": {
-            "title": "How long after making a purchase can I request a refund?",
-            "content": "<p>You can submit a return request within 30 days of receiving your purchased product. For more information, please refer to our Returns and Refunds Policy.</p>"
+            "title": "Dopo quanto tempo dall'acquisto posso richiedere un rimborso?",
+            "content": "<p>Puoi richiedere un reso <strong>entro 30 giorni dalla ricezione del prodotto acquistato</strong>. Per maggiori informazioni, consulta la nostra <a href=\"/pages/rimborso\" target=\"_blank\" title=\"Politica di rimborso\"><strong>Politica di reso e rimborso</strong></a>.</p>"
           }
         },
         "item_MVzYnN": {
@@ -88,8 +88,8 @@
       "name": "FAQ",
       "settings": {
         "full_width": true,
-        "subheading": "NEED HELP?",
-        "title": "FREQUENTLY ASKED QUESTIONS",
+        "subheading": "HAI BISOGNO DI AIUTO?",
+        "title": "DOMANDE FREQUENTI (FAQ)",
         "content": "",
         "team_avatar_width": 160,
         "support_hours": "",
