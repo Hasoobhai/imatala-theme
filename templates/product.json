@@ -255,6 +255,7 @@
         "image_zkwc8M": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_8_sep_2026_20_17_48.png",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
