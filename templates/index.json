@@ -337,6 +337,7 @@
       "block_order": [
         "ai_gen_block_5fd3cb8_xkGTAw"
       ],
+      "disabled": true,
       "settings": {}
     },
     "collection_list_VEcQxQ": {
@@ -480,8 +481,8 @@
             "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
-            "title": "BEZPIECZNE PŁATNOŚCI",
-            "content": "<p>Bardzo cenimy Twoje bezpieczeństwo i wygodę!</p>"
+            "title": "PAGAMENTI SICURI",
+            "content": "<p>Teniamo molto alla tua sicurezza e comodità!</p>"
           }
         },
         "item_qwVbR6": {
@@ -641,6 +642,7 @@
         "slide_DwNY6X",
         "slide_EdTjcC"
       ],
+      "disabled": true,
       "name": "SS - Testimonials #12",
       "settings": {
         "heading": "<h2><strong>Co mówią nasi klienci</strong></h2>",
