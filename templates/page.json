@@ -63,8 +63,8 @@
         "item_AH99BU": {
           "type": "item",
           "settings": {
-            "title": "Do you ship worldwide?",
-            "content": "<p>We currently ship orders within Poland only.</p>"
+            "title": "Spedite in tutto il mondo?",
+            "content": "<p>Attualmente effettuiamo <strong>spedizioni gratuite esclusivamente in Italia</strong>.</p>"
           }
         },
         "item_CBptQU": {
