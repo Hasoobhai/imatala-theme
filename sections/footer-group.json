@@ -42,7 +42,7 @@
         "links_MpT7Ri": {
           "type": "links",
           "settings": {
-            "menu": "footer",
+            "menu": "le-nostre-policy",
             "show_menu_title": true,
             "menu_title": "Le Nostre Politicy"
           }
