@@ -60,7 +60,7 @@
         "liquid_aqPJzA": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"product-info__liquid\">\n              <div class=\"stock-info-cstm\">\n    <div class=\"blob red custom-icons blob-trust\"></div>\n    <p>Pozostało tylko kilka sztuk</p>\n</div>\n            </div>"
+            "liquid": "<div class=\"product-info__liquid\">\n              <div class=\"stock-info-cstm\">\n    <div class=\"blob red custom-icons blob-trust\"></div>\n    <p>Ne restano solo pochi pezzi</p>\n</div>\n            </div>"
           }
         },
         "buy_buttons": {
