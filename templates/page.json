@@ -35,8 +35,8 @@
         "item_EKndyA": {
           "type": "item",
           "settings": {
-            "title": "What payment methods do you accept?",
-            "content": "<p>We accept a variety of payment methods to make your shopping experience as convenient as possible. These include <strong>Przelewy24, BLIK, and credit cards such as Visa, MasterCard, and American Express</strong>.</p><p>For your convenience, additional local payment options may be available in certain regions and will be displayed at checkout. For more information, please refer to our <strong>Payment Policy</strong>.</p>"
+            "title": "Quali metodi di pagamento accettate?",
+            "content": "<p>Accettiamo diversi metodi di pagamento per rendere la tua esperienza di acquisto il più semplice e conveniente possibile. Sono inclusi <strong>PayPal e carte di credito come Visa, MasterCard e American Express</strong>.</p><p>Per maggiori informazioni, consulta la nostra <strong>Politica sui pagamenti</strong>.</p>"
           }
         },
         "item_fURTUe": {
