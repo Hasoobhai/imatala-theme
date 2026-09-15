@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer group",
@@ -10,8 +19,8 @@
           "settings": {
             "image_width": 150,
             "heading_size": "h4",
-            "title": "BIULETYN",
-            "content": "<p>Zapisz się do naszego biuletynu, aby otrzymywać ekskluzywne oferty.<br/><br/><br/></p>"
+            "title": "NEWSLETTER",
+            "content": "<p>Iscriviti alla nostra newsletter per ricevere offerte esclusive.<br/><br/><br/></p>"
           }
         },
         "text_zKUhEp": {
@@ -33,7 +42,7 @@
         "links_YfMxVU": {
           "type": "links",
           "settings": {
-            "menu": "nasze-polityki",
+            "menu": "",
             "show_menu_title": true,
             "menu_title": "Nasze Polityki"
           }
