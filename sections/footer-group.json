@@ -39,6 +39,14 @@
             "enable_follow_on_shop": false
           }
         },
+        "links_MpT7Ri": {
+          "type": "links",
+          "settings": {
+            "menu": "footer",
+            "show_menu_title": true,
+            "menu_title": "Le Nostre Politicy"
+          }
+        },
         "links_YfMxVU": {
           "type": "links",
           "settings": {
@@ -52,6 +60,7 @@
         "newsletter_8qWHLj",
         "text_zKUhEp",
         "text_K8npTX",
+        "links_MpT7Ri",
         "links_YfMxVU"
       ],
       "settings": {
