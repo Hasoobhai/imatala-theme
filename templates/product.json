@@ -88,6 +88,7 @@
         },
         "liquid_qtqQz6": {
           "type": "liquid",
+          "disabled": true,
           "settings": {
             "liquid": "<div class=\"km-bundle\">\n  <h3 class=\"km-bundle__title\">WIĘCEJ OSZCZĘDZASZ, WIĘCEJ ZYSKUJESZ</h3>\n  <p class=\"km-bundle__sub\">Połącz styl z oszczędnością — im więcej zamawiasz, tym więcej zostawiasz w portfelu.</p>\n  <div class=\"km-bundle__rows\">\n    <div class=\"km-bundle__row\">2 produkty — <strong>dodatkowe 10% rabatu</strong></div>\n    <div class=\"km-bundle__row\">3 produkty — <strong>dodatkowe 15% rabatu</strong></div>\n    <div class=\"km-bundle__row\">4 produkty — <strong>dodatkowe 20% rabatu</strong></div>\n    <div class=\"km-bundle__row\">5+ produktów — <strong>dodatkowe 25% rabatu</strong></div>\n  </div>\n</div>\n\n<style>\n.km-bundle {\n  background: #e8e0d5;\n  border-radius: 8px;\n  padding: 24px 20px;\n  text-align: center;\n  margin: 8px 0;\n}\n.km-bundle__title {\n  font-size: 20px;\n  font-weight: 800;\n  color: #1a1a1a;\n  margin: 0 0 8px;\n  letter-spacing: 0.02em;\n}\n.km-bundle__sub {\n  font-size: 13px;\n  color: #5a4a3a;\n  margin: 0 0 16px;\n}\n.km-bundle__rows {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n.km-bundle__row {\n  background: #f0ece4;\n  border-radius: 6px;\n  padding: 14px 16px;\n  font-size: 14px;\n  color: #1a1a1a;\n}\n.km-bundle__row strong {\n  color: #6c2d31;\n}\n</style>"
           }
@@ -101,16 +102,16 @@
         "collapsible_text_K333YY": {
           "type": "collapsible_text",
           "settings": {
-            "title": "DARMOWA WYSYŁKA Z ŚLEDZENIEM",
-            "content": "<p>Wszystkie zamówienia są wysyłane <strong>bezpłatnie z numerem śledzenia</strong>.</p><p><strong>Czas realizacji:</strong> 1–3 dni robocze.</p><p>Dostawa z możliwością śledzenia do Polski zazwyczaj trwa <strong>6–12 dni roboczych od momentu wysyłki</strong>. Przewoźnicy mogą się różnić w zależności od trasy; numer śledzenia jest zawsze udostępniany.</p><p>Szczegółowe informacje można znaleźć w naszej <a href=\"/pages/polityka-wysylki\" target=\"_blank\" title=\"Polityka wysyłki\"><strong>Polityce wysyłki</strong>.</a></p>",
+            "title": "SPEDIZIONE GRATUITA CON TRACCIAMENTO",
+            "content": "<p><strong>Tutti gli ordini vengono spediti gratuitamente con numero di tracciamento.</strong></p><p><strong>Tempo di elaborazione:</strong> 1–3 giorni lavorativi.</p><p>La consegna con tracciamento in <strong>Italia</strong> richiede generalmente <strong>6–12 giorni lavorativi dalla spedizione</strong>. I corrieri possono variare a seconda del percorso; il numero di tracciamento viene sempre fornito.</p><p>Per informazioni dettagliate, consulta la nostra <a href=\"/pages/politica-di-spedizione\" target=\"_blank\" title=\"Politica di spedizione\"><strong>Politica di spedizione</strong></a></p>",
             "page": ""
           }
         },
         "collapsible_text_cPXhc8": {
           "type": "collapsible_text",
           "settings": {
-            "title": "ŁATWA POLITYKA ZWROTÓW – 30 DNI",
-            "content": "<p>Produkty można zwrócić <strong>w ciągu 30 dni od daty dostawy</strong>, bez podania przyczyny.</p><p>Zwroty są wysyłane do naszego centrum realizacji zamówień w <strong>Ningbo, Chiny</strong>, a <strong>koszty wysyłki zwrotnej ponosi klient</strong>.</p><p>Pełne informacje znajdują się w naszej <a href=\"/pages/zasady-wysylki\" target=\"_blank\" title=\"ZASADY WYSYŁKI\"><strong>Polityce zwrotów i refundacji</strong>.</a></p>",
+            "title": "POLITICA DI RESO FACILE – 30 GIORNI",
+            "content": "<p>I prodotti possono essere restituiti <strong>entro 30 giorni dalla data di consegna</strong>, senza dover fornire alcuna motivazione.</p><p>I resi devono essere spediti al nostro centro di gestione degli ordini a <strong>Ningbo, Cina</strong>, e <strong>le spese di spedizione per il reso sono a carico del cliente</strong>.</p><p>Per informazioni complete, consulta la nostra <a href=\"/pages/politica-di-reso-e-cambi\" title=\"POLITICA DI RESO\"><strong>Politica di reso e rimborso</strong>.</a></p>",
             "page": ""
           }
         }
