@@ -82,7 +82,12 @@
       "name": "Featured collection",
       "settings": {
         "collection": "",
-        "products": [],
+        "products": [
+          "errore-500-problema-di-server-risolvi-il-tuo-errore-con-supporto-tecnico-online",
+          "errore-500-problema-di-server-soluzioni-efficaci-e-assistenza-tecnica-24-7",
+          "stivaleria-stivali-cowboy-uomo-eleganti-stivali-da-cowboy-alla-caviglia-in-pelle-nera",
+          "celeste-blazer-donna-elegante-blazer-in-maglia-con-dettagli-in-pelliccia-per-stile-casual-e-formale"
+        ],
         "full_width": true,
         "stack_products": true,
         "show_progress_bar": false,
