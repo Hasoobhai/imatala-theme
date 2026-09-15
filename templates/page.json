@@ -28,8 +28,8 @@
         "item_MVzYnN": {
           "type": "item",
           "settings": {
-            "title": "The estimated delivery time has passed. Where is my order?",
-            "content": "<p>In 99% of cases, orders are delivered within the estimated delivery time. However, delays can occasionally occur during transit. You can check the status of your order using the following link:<strong> Track My Order.</strong></p><p>If you have not received your package within 3 days after the estimated delivery date, please contact us: <a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">Contact</a></p>"
+            "title": "Il tempo di consegna stimato è trascorso. Dov'è il mio ordine?",
+            "content": "<p>Nel 99% dei casi, gli ordini vengono consegnati entro i tempi di consegna stimati. Tuttavia, occasionalmente possono verificarsi ritardi durante il trasporto. Puoi controllare lo stato del tuo ordine tramite il seguente link: <strong>Traccia il mio ordine</strong>.</p><p>Se non hai ricevuto il tuo pacco entro <strong>3 giorni dalla data di consegna stimata</strong>, contattaci: <a href=\"/pages/contatti\" target=\"_blank\" title=\"Contatti\"><strong>Contatti</strong></a></p>"
           }
         },
         "item_EKndyA": {
