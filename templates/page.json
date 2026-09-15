@@ -70,8 +70,8 @@
         "item_CBptQU": {
           "type": "item",
           "settings": {
-            "title": "What are the shipping costs?",
-            "content": "<p>We do not charge any shipping fees. Shipping within Poland is always FREE.</p>"
+            "title": "Quali sono i costi di spedizione?",
+            "content": "<p>Non applichiamo alcun costo di spedizione. La spedizione in <strong>Italia è sempre GRATUITA</strong>.</p>"
           }
         }
       },
