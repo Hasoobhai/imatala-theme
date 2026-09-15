@@ -42,22 +42,22 @@
         "item_fURTUe": {
           "type": "item",
           "settings": {
-            "title": "Are my payment details safe with you?",
-            "content": "<p>Your security is our highest priority. All transactions on our website are encrypted using advanced SSL technology to ensure your privacy and security. We continuously monitor and update our website to meet the latest security standards and comply with regulatory requirements.</p>"
+            "title": "I dati del mio pagamento sono al sicuro con voi?",
+            "content": "<p>La tua sicurezza è la nostra massima priorità. Tutte le transazioni sul nostro sito sono <strong>crittografate utilizzando una tecnologia SSL avanzata</strong> per garantire la tua privacy e sicurezza. Monitoriamo e aggiorniamo continuamente il nostro sito web per soddisfare i più recenti standard di sicurezza e rispettare i requisiti normativi.</p>"
           }
         },
         "item_tTQRR6": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to receive my order?",
-            "content": "<p>Below are the estimated delivery times for all packages:</p><ul><li><strong>Order cutoff time:</strong> 17:00 (CET) – Greenwich Mean Time. Orders placed after this time will be processed on the next business day, which may extend the estimated delivery time by one day.</li><li><strong>Processing time:</strong> 1–3 business days (Monday to Friday). Once processed, your order will be shipped by one of our trusted carriers.</li><li><strong>Shipping time:</strong> 6–12 business days (Monday to Friday).</li><li><strong>Estimated delivery time:</strong> 7–15 business days.</li><li>For more information, please refer to our <strong>Shipping Policy</strong>.</li></ul>"
+            "title": "Quanto tempo ci vorrà per ricevere il mio ordine?",
+            "content": "<p>Di seguito sono riportati i tempi di consegna stimati per tutti i pacchi:</p><ul><li><strong>Orario limite per gli ordini:</strong> 17:00 (CET) – Ora dell'Europa centrale. Gli ordini effettuati dopo questo orario verranno elaborati il giorno lavorativo successivo, il che potrebbe prolungare i tempi di consegna stimati di un giorno.<br/></li><li><strong>Tempo di elaborazione:</strong> 1–3 giorni lavorativi (dal lunedì al venerdì). Una volta elaborato, il tuo ordine verrà spedito tramite uno dei nostri corrieri di fiducia.<br/></li><li><strong>Tempo di spedizione:</strong> 6–12 giorni lavorativi (dal lunedì al venerdì).<br/></li><li><strong>Tempo di consegna stimato:</strong> 7–15 giorni lavorativi.<br/></li><li>Per maggiori informazioni, consulta la nostra <a href=\"/pages/politica-di-spedizione\" target=\"_blank\" title=\"Politica di spedizione\"><strong>Politica di spedizione</strong>.</a></li></ul>"
           }
         },
         "item_HjTJxB": {
           "type": "item",
           "settings": {
-            "title": "How can I contact customer support?",
-            "content": "<p>You can contact our customer support team by visiting the Contact page or by sending an email.</p>"
+            "title": "Come posso contattare il servizio clienti?",
+            "content": "<p>Puoi contattare il nostro servizio clienti visitando la pagina <a href=\"/pages/contatti\" target=\"_blank\" title=\"Contatti\"><strong>Contatti</strong> </a>oppure inviandoci un'e-mail.</p>"
           }
         },
         "item_AH99BU": {
