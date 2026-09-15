@@ -46,22 +46,13 @@
             "show_menu_title": true,
             "menu_title": "Le Nostre Politicy"
           }
-        },
-        "links_YfMxVU": {
-          "type": "links",
-          "settings": {
-            "menu": "",
-            "show_menu_title": true,
-            "menu_title": "Nasze Polityki"
-          }
         }
       },
       "block_order": [
         "newsletter_8qWHLj",
         "text_zKUhEp",
         "text_K8npTX",
-        "links_MpT7Ri",
-        "links_YfMxVU"
+        "links_MpT7Ri"
       ],
       "settings": {
         "show_social_media": true,
