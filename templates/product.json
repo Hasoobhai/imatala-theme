@@ -163,8 +163,8 @@
             "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
-            "title": "BEZPIECZNE PŁATNOŚCI",
-            "content": "<p>We bardzo cenimy Twoje bezpieczeństwo i wygodę!</p>"
+            "title": "PAGAMENTI SICURI",
+            "content": "<p>TENIAMO ALLA TUA SICUREZZA E AL TUO COMFORT!</p>"
           }
         },
         "item_3gndTD": {
@@ -176,8 +176,8 @@
             "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
-            "title": "DARMOWA WYSYŁKA",
-            "content": "<p>NA WSZYSTKIE ZAMÓWIENIA NA TERENIE POLSKI</p>"
+            "title": "SPEDIZIONE GRATUITA",
+            "content": "<p>SU TUTTI GLI ORDINI IN ITALIA</p>"
           }
         },
         "item_njk9Dr": {
@@ -189,8 +189,8 @@
             "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
-            "title": "ŁATWY ZWROT!",
-            "content": "<p>Rozpocznij zwrot w ciągu 30 dni od otrzymania produktu!</p>"
+            "title": "RESO FACILE!",
+            "content": "<p>AVVIA UN RESO ENTRO 30 GIORNI DAL RECIVIMENTO DEL PRODOTTO!</p>"
           }
         },
         "item_N9Gy8D": {
@@ -202,8 +202,8 @@
             "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
-            "title": "MASZ PYTANIE?",
-            "content": "<p>Obsługa klienta dostępna 7 dni w tygodniu.</p>"
+            "title": "HAI UNA DOMANDA?",
+            "content": "<p>SERVIZIO CLIENTI DISPONIBILE 7 GIORNI SU 7</p>"
           }
         }
       },
