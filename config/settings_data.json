@@ -73,6 +73,11 @@
         "type": "shopify://apps/bf-size-charts/blocks/embed-block/47ee4f2e-eb5e-41af-9beb-e2786646bf2a",
         "disabled": false,
         "settings": {}
+      },
+      "14327677521557774844": {
+        "type": "shopify://apps/simprosys-google-shopping-feed/blocks/core_settings_block/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
